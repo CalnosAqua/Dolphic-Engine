@@ -1,0 +1,18 @@
+root = true
+
+[*]
+# FILE FORMAT
+charset = utf-8
+end_of_line = crlf
+
+# TEXT FORMAT
+indent_style = tab
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{hlsl,hlsli}]
+charset = ansi
+
+[*.{h,hpp,c,cpp,inl}]
+charset = utf-8-bom
