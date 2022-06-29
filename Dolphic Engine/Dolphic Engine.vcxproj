@@ -37,8 +37,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{563351af-7885-407f-b158-28d278cfddab}</ProjectGuid>
-    <RootNamespace>DEProject</RootNamespace>
+    <ProjectGuid>{ee8e807b-d85d-43c0-9e8b-ad90da2d8bae}</ProjectGuid>
+    <RootNamespace>DolphicEngine</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -46,53 +46,53 @@
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>NotSet</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>NotSet</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>NotSet</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>NotSet</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>NotSet</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>NotSet</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>NotSet</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>NotSet</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -124,45 +124,45 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>.\bin\</OutDir>
-    <IntDir>..\build\debug\x86\</IntDir>
-    <TargetName>dlph_x86d</TargetName>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-    <TargetName>dlph_a86d</TargetName>
-    <OutDir>.\bin\</OutDir>
-    <IntDir>..\build\debug\a86\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>.\bin\</OutDir>
-    <IntDir>..\build\release\x86\</IntDir>
-    <TargetName>dlph_x86</TargetName>
+    <OutDir>.\bin\a86\debug\</OutDir>
+    <IntDir>..\build\a86\debug\</IntDir>
+    <TargetName>dlph</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
-    <TargetName>dlph_a86</TargetName>
-    <OutDir>.\bin\</OutDir>
-    <IntDir>..\build\release\a86\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>.\bin\</OutDir>
-    <IntDir>..\build\debug\x64\</IntDir>
-    <TargetName>dlph_x64d</TargetName>
+    <OutDir>.\bin\a86\release\</OutDir>
+    <IntDir>..\build\a86\release\</IntDir>
+    <TargetName>dlph</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
-    <TargetName>dlph_a64d</TargetName>
-    <OutDir>.\bin\</OutDir>
-    <IntDir>..\build\debug\a64\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>.\bin\</OutDir>
-    <IntDir>..\build\release\x64\</IntDir>
-    <TargetName>dlph_x64</TargetName>
+    <OutDir>.\bin\a64\debug\</OutDir>
+    <IntDir>..\build\a64\debug\</IntDir>
+    <TargetName>dlph</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
-    <TargetName>dlph_a64</TargetName>
-    <OutDir>.\bin\</OutDir>
-    <IntDir>..\build\release\a64\</IntDir>
+    <OutDir>.\bin\a64\release\</OutDir>
+    <IntDir>..\build\a64\release\</IntDir>
+    <TargetName>dlph</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\bin\x86\debug\</OutDir>
+    <IntDir>..\build\x86\debug\</IntDir>
+    <TargetName>dlph</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\bin\x86\release\</OutDir>
+    <IntDir>..\build\x86\release\</IntDir>
+    <TargetName>dlph</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>.\bin\x64\debug\</OutDir>
+    <IntDir>..\build\x64\debug\</IntDir>
+    <TargetName>dlph</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>.\bin\x64\release\</OutDir>
+    <IntDir>..\build\x64\release\</IntDir>
+    <TargetName>dlph</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -172,20 +172,23 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>.\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>..\DirectXTex\include\;.\include\;C:\VulkanSDK\1.3.211.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.hpp</PrecompiledHeaderFile>
       <AssemblerOutput>AssemblyAndMachineCode</AssemblerOutput>
       <AssemblerListingLocation>$(IntDir)asm\</AssemblerListingLocation>
       <ForcedIncludeFiles>stdafx.hpp;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\VulkanSDK\1.3.211.0\Lib32;..\DirectXTex\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>winmm.lib;dxgi.lib;d3d12.lib;d3dcompiler.lib;vulkan-1.lib;.\\x86\\Debug\\DirectXTex.lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
@@ -195,20 +198,23 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>.\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>..\DirectXTex\include\;.\include\;C:\VulkanSDK\1.3.211.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.hpp</PrecompiledHeaderFile>
       <AssemblerOutput>AssemblyAndMachineCode</AssemblerOutput>
       <AssemblerListingLocation>$(IntDir)asm\</AssemblerListingLocation>
       <ForcedIncludeFiles>stdafx.hpp;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\VulkanSDK\1.3.211.0\Lib32;..\DirectXTex\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>winmm.lib;dxgi.lib;d3d12.lib;d3dcompiler.lib;vulkan-1.lib;.\\a64\\Debug\\DirectXTex.lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -220,22 +226,25 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>.\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>..\DirectXTex\include\;.\include\;C:\VulkanSDK\1.3.211.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.hpp</PrecompiledHeaderFile>
       <AssemblerOutput>AssemblyAndMachineCode</AssemblerOutput>
       <AssemblerListingLocation>$(IntDir)asm\</AssemblerListingLocation>
       <ForcedIncludeFiles>stdafx.hpp;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\VulkanSDK\1.3.211.0\Lib32;..\DirectXTex\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>winmm.lib;dxgi.lib;d3d12.lib;d3dcompiler.lib;vulkan-1.lib;.\\x86\\Release\\DirectXTex.lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ClCompile>
@@ -247,22 +256,25 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>.\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>..\DirectXTex\include\;.\include\;C:\VulkanSDK\1.3.211.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.hpp</PrecompiledHeaderFile>
       <AssemblerOutput>AssemblyAndMachineCode</AssemblerOutput>
       <AssemblerListingLocation>$(IntDir)asm\</AssemblerListingLocation>
       <ForcedIncludeFiles>stdafx.hpp;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\VulkanSDK\1.3.211.0\Lib32;..\DirectXTex\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>winmm.lib;dxgi.lib;d3d12.lib;d3dcompiler.lib;vulkan-1.lib;.\\a64\\Release\\DirectXTex.lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -272,20 +284,23 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>.\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>..\DirectXTex\include\;.\include\;C:\VulkanSDK\1.3.211.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.hpp</PrecompiledHeaderFile>
       <AssemblerOutput>AssemblyAndMachineCode</AssemblerOutput>
       <AssemblerListingLocation>$(IntDir)asm\</AssemblerListingLocation>
       <ForcedIncludeFiles>stdafx.hpp;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\VulkanSDK\1.3.211.0\Lib;..\DirectXTex\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>winmm.lib;dxgi.lib;d3d12.lib;d3dcompiler.lib;vulkan-1.lib;.\\x64\\Debug\\DirectXTex.lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <ClCompile>
@@ -295,20 +310,23 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>.\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>..\DirectXTex\include\;.\include\;C:\VulkanSDK\1.3.211.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.hpp</PrecompiledHeaderFile>
       <AssemblerOutput>AssemblyAndMachineCode</AssemblerOutput>
       <AssemblerListingLocation>$(IntDir)asm\</AssemblerListingLocation>
       <ForcedIncludeFiles>stdafx.hpp;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\VulkanSDK\1.3.211.0\Lib;..\DirectXTex\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>winmm.lib;dxgi.lib;d3d12.lib;d3dcompiler.lib;vulkan-1.lib;.\\a64\\Debug\\DirectXTex.lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -320,22 +338,25 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>.\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>..\DirectXTex\include\;.\include\;C:\VulkanSDK\1.3.211.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.hpp</PrecompiledHeaderFile>
       <AssemblerOutput>AssemblyAndMachineCode</AssemblerOutput>
       <AssemblerListingLocation>$(IntDir)asm\</AssemblerListingLocation>
       <ForcedIncludeFiles>stdafx.hpp;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\VulkanSDK\1.3.211.0\Lib;..\DirectXTex\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>winmm.lib;dxgi.lib;d3d12.lib;d3dcompiler.lib;vulkan-1.lib;.\\x64\\Release\\DirectXTex.lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <ClCompile>
@@ -347,24 +368,140 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>.\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>..\DirectXTex\include\;.\include\;C:\VulkanSDK\1.3.211.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.hpp</PrecompiledHeaderFile>
       <AssemblerOutput>AssemblyAndMachineCode</AssemblerOutput>
       <AssemblerListingLocation>$(IntDir)asm\</AssemblerListingLocation>
       <ForcedIncludeFiles>stdafx.hpp;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\VulkanSDK\1.3.211.0\Lib;..\DirectXTex\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>winmm.lib;dxgi.lib;d3d12.lib;d3dcompiler.lib;vulkan-1.lib;.\\a64\\Release\\DirectXTex.lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\DirectXTex\include\d3dx12.h" />
+    <ClInclude Include="..\DirectXTex\include\DDSTextureLoader12.h" />
+    <ClInclude Include="..\DirectXTex\include\DirectXTex.h" />
+    <ClInclude Include="..\DirectXTex\include\WICTextureLoader12.h" />
+    <ClInclude Include="include\cont\array.hpp" />
+    <ClInclude Include="include\cont\vector.hpp" />
+    <ClInclude Include="include\d3d12\D3D12Buffer.hpp" />
+    <ClInclude Include="include\d3d12\D3D12CommandList.hpp" />
+    <ClInclude Include="include\d3d12\D3D12CommandQueue.hpp" />
+    <ClInclude Include="include\d3d12\D3D12CommandType.hpp" />
+    <ClInclude Include="include\d3d12\D3D12Device.hpp" />
+    <ClInclude Include="include\d3d12\D3D12Fence.hpp" />
+    <ClInclude Include="include\d3d12\D3D12Renderer.hpp" />
+    <ClInclude Include="include\d3d12\D3D12ResourceBarrier.hpp" />
+    <ClInclude Include="include\d3d12\D3D12Shader.hpp" />
+    <ClInclude Include="include\d3d12\D3D12SwapChain.hpp" />
+    <ClInclude Include="include\d3d12\D3D12ViewType.hpp" />
+    <ClInclude Include="include\dlph.hpp" />
+    <ClInclude Include="include\dlph\cmd_list.hpp" />
+    <ClInclude Include="include\dlph\cmd_queue.hpp" />
+    <ClInclude Include="include\dlph\device.hpp" />
+    <ClInclude Include="include\dlph\renderer.hpp" />
+    <ClInclude Include="include\dlph\vsync.hpp" />
+    <ClInclude Include="include\geo\bezier.hpp" />
+    <ClInclude Include="include\geo\fpln3.hpp" />
+    <ClInclude Include="include\geo\fray3.hpp" />
+    <ClInclude Include="include\ifs\noncopyable.hpp" />
+    <ClInclude Include="include\ifs\nonmovable.hpp" />
+    <ClInclude Include="include\ifs\sharable.hpp" />
+    <ClInclude Include="include\ifs\singleton.hpp" />
+    <ClInclude Include="include\math\fcomp.hpp" />
+    <ClInclude Include="include\math\ferot.hpp" />
+    <ClInclude Include="include\math\fmtx2x2.hpp" />
+    <ClInclude Include="include\math\fmtx3x3.hpp" />
+    <ClInclude Include="include\math\fmtx4x4.hpp" />
+    <ClInclude Include="include\math\fquat.hpp" />
+    <ClInclude Include="include\math\frot.hpp" />
+    <ClInclude Include="include\math\fvec2.hpp" />
+    <ClInclude Include="include\math\fvec3.hpp" />
+    <ClInclude Include="include\math\fvec4.hpp" />
+    <ClInclude Include="include\math\intrin.hpp" />
+    <ClInclude Include="include\math\math.hpp" />
+    <ClInclude Include="include\math\mathutil.hpp" />
+    <ClInclude Include="include\structs\flt2.hpp" />
+    <ClInclude Include="include\structs\flt2x2.hpp" />
+    <ClInclude Include="include\structs\flt3.hpp" />
+    <ClInclude Include="include\structs\flt3x3.hpp" />
+    <ClInclude Include="include\structs\flt4.hpp" />
+    <ClInclude Include="include\structs\flt4x4.hpp" />
+    <ClInclude Include="include\times\clock.hpp" />
+    <ClInclude Include="include\times\timer.hpp" />
+    <ClInclude Include="include\util\utility.hpp" />
+    <ClInclude Include="include\vk\VKDevice.hpp" />
+    <ClInclude Include="include\vk\VKRenderer.hpp" />
+    <ClInclude Include="include\win\WinWindow.hpp" />
+    <ClInclude Include="stdafx.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\DirectXTex\include\DDSTextureLoader12.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\DirectXTex\include\WICTextureLoader12.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\d3d12\D3D12Buffer.cpp" />
+    <ClCompile Include="src\d3d12\D3D12CommandList.cpp" />
+    <ClCompile Include="src\d3d12\D3D12CommandQueue.cpp" />
+    <ClCompile Include="src\d3d12\D3D12Device.cpp" />
+    <ClCompile Include="src\d3d12\D3D12Fence.cpp" />
+    <ClCompile Include="src\d3d12\D3D12Renderer.cpp" />
+    <ClCompile Include="src\d3d12\D3D12ResourceBarrier.cpp" />
+    <ClCompile Include="src\d3d12\D3D12Shader.cpp" />
+    <ClCompile Include="src\d3d12\D3D12SwapChain.cpp" />
+    <ClCompile Include="src\dlph\cmd_list.cpp" />
+    <ClCompile Include="src\dlph\cmd_queue.cpp" />
+    <ClCompile Include="src\dlph\device.cpp" />
+    <ClCompile Include="src\dlph\renderer.cpp" />
+    <ClCompile Include="src\dlph\vsync.cpp" />
+    <ClCompile Include="src\geo\fpln3.cpp" />
+    <ClCompile Include="src\geo\fray3.cpp" />
+    <ClCompile Include="src\math\fcomp.cpp" />
+    <ClCompile Include="src\math\ferot.cpp" />
+    <ClCompile Include="src\math\fmtx2x2.cpp" />
+    <ClCompile Include="src\math\fmtx3x3.cpp" />
+    <ClCompile Include="src\math\fmtx4x4.cpp" />
+    <ClCompile Include="src\math\fquat.cpp" />
+    <ClCompile Include="src\math\frot.cpp" />
+    <ClCompile Include="src\math\fvec2.cpp" />
+    <ClCompile Include="src\math\fvec3.cpp" />
+    <ClCompile Include="src\math\fvec4.cpp" />
+    <ClCompile Include="src\math\intrin.cpp" />
+    <ClCompile Include="src\math\math.cpp" />
+    <ClCompile Include="src\math\mathutil.cpp" />
+    <ClCompile Include="src\structs\flt2.cpp" />
+    <ClCompile Include="src\structs\flt3.cpp" />
+    <ClCompile Include="src\structs\flt4.cpp" />
+    <ClCompile Include="src\times\clock.cpp" />
+    <ClCompile Include="src\times\timer.cpp" />
+    <ClCompile Include="src\win\WinWindow.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -377,8 +514,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\dlph.hpp" />
-    <ClInclude Include="stdafx.hpp" />
+    <None Include="..\DirectXTex\include\DirectXTex.inl" />
+    <None Include="include\cont\array.inl" />
+    <None Include="include\cont\vector.inl" />
+    <None Include="include\d3d12\D3D12Buffer.inl" />
+    <None Include="include\geo\bezier.inl" />
+    <None Include="include\math\mathutil.inl" />
+    <None Include="include\util\utility.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

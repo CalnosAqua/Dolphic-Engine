@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Project">
+      <UniqueIdentifier>{465daf79-038d-4253-abd7-d685d5d230ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{a6eac52f-5bae-49c9-99f6-74db4749871f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\DirectXTex">
+      <UniqueIdentifier>{79c7c17e-1afa-4732-9c35-b5602f38a4b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Direct3D12">
+      <UniqueIdentifier>{b919d06e-c79e-4fe0-87e2-cc0b4587ec84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\DolphicRenderer">
+      <UniqueIdentifier>{6385c0c2-8d08-449f-9b1f-19470d26c35c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Container">
+      <UniqueIdentifier>{b52f9da6-d359-4465-af65-e1d5013be687}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Geometry">
+      <UniqueIdentifier>{6d7e5494-6273-40d6-9c3d-1c7ee287acb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Interface">
+      <UniqueIdentifier>{b6424dc5-fb07-45b8-a6eb-8a39b4b3c199}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Mathematic">
+      <UniqueIdentifier>{e9e50815-a11b-45e0-80df-5514a862a73f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Structure">
+      <UniqueIdentifier>{5eaa823d-2b48-487f-a71e-fd416815e595}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Time Manager">
+      <UniqueIdentifier>{92f71c64-dc75-4c5c-917b-4337e0ac66e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Utility">
+      <UniqueIdentifier>{48114037-78be-435b-9102-82124a5cc193}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Vulkan">
+      <UniqueIdentifier>{8818fe7e-e4c8-49f8-8ea0-9286d4e334b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Window">
+      <UniqueIdentifier>{788a6dfe-4d56-4123-9cf3-16037352b2e9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\dlph.hpp">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.hpp">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DirectXTex\include\d3dx12.h">
+      <Filter>Framework\DirectXTex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DirectXTex\include\DDSTextureLoader12.h">
+      <Filter>Framework\DirectXTex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DirectXTex\include\DirectXTex.h">
+      <Filter>Framework\DirectXTex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DirectXTex\include\WICTextureLoader12.h">
+      <Filter>Framework\DirectXTex</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cont\array.hpp">
+      <Filter>Project\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cont\vector.hpp">
+      <Filter>Project\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\D3D12Buffer.hpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\D3D12CommandList.hpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\D3D12CommandQueue.hpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\D3D12CommandType.hpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\D3D12Device.hpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\D3D12Fence.hpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\D3D12Renderer.hpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\D3D12ResourceBarrier.hpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\D3D12Shader.hpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\D3D12SwapChain.hpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\D3D12ViewType.hpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dlph\cmd_list.hpp">
+      <Filter>Project\DolphicRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dlph\cmd_queue.hpp">
+      <Filter>Project\DolphicRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dlph\device.hpp">
+      <Filter>Project\DolphicRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dlph\renderer.hpp">
+      <Filter>Project\DolphicRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dlph\vsync.hpp">
+      <Filter>Project\DolphicRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\geo\bezier.hpp">
+      <Filter>Project\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="include\geo\fpln3.hpp">
+      <Filter>Project\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="include\geo\fray3.hpp">
+      <Filter>Project\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ifs\noncopyable.hpp">
+      <Filter>Project\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ifs\nonmovable.hpp">
+      <Filter>Project\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ifs\sharable.hpp">
+      <Filter>Project\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ifs\singleton.hpp">
+      <Filter>Project\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="include\math\fcomp.hpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClInclude>
+    <ClInclude Include="include\math\ferot.hpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClInclude>
+    <ClInclude Include="include\math\fmtx2x2.hpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClInclude>
+    <ClInclude Include="include\math\fmtx3x3.hpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClInclude>
+    <ClInclude Include="include\math\fmtx4x4.hpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClInclude>
+    <ClInclude Include="include\math\fquat.hpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClInclude>
+    <ClInclude Include="include\math\frot.hpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClInclude>
+    <ClInclude Include="include\math\fvec2.hpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClInclude>
+    <ClInclude Include="include\math\fvec3.hpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClInclude>
+    <ClInclude Include="include\math\fvec4.hpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClInclude>
+    <ClInclude Include="include\math\math.hpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClInclude>
+    <ClInclude Include="include\math\mathutil.hpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClInclude>
+    <ClInclude Include="include\structs\flt2.hpp">
+      <Filter>Project\Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include\structs\flt2x2.hpp">
+      <Filter>Project\Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include\structs\flt3.hpp">
+      <Filter>Project\Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include\structs\flt3x3.hpp">
+      <Filter>Project\Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include\structs\flt4.hpp">
+      <Filter>Project\Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include\structs\flt4x4.hpp">
+      <Filter>Project\Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include\times\clock.hpp">
+      <Filter>Project\Time Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="include\times\timer.hpp">
+      <Filter>Project\Time Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="include\util\utility.hpp">
+      <Filter>Project\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vk\VKDevice.hpp">
+      <Filter>Project\Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vk\VKRenderer.hpp">
+      <Filter>Project\Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="include\win\WinWindow.hpp">
+      <Filter>Project\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="include\math\intrin.hpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DirectXTex\include\DDSTextureLoader12.cpp">
+      <Filter>Framework\DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DirectXTex\include\WICTextureLoader12.cpp">
+      <Filter>Framework\DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="src\d3d12\D3D12Buffer.cpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClCompile>
+    <ClCompile Include="src\d3d12\D3D12CommandList.cpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClCompile>
+    <ClCompile Include="src\d3d12\D3D12CommandQueue.cpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClCompile>
+    <ClCompile Include="src\d3d12\D3D12Device.cpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClCompile>
+    <ClCompile Include="src\d3d12\D3D12Fence.cpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClCompile>
+    <ClCompile Include="src\d3d12\D3D12Renderer.cpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClCompile>
+    <ClCompile Include="src\d3d12\D3D12ResourceBarrier.cpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClCompile>
+    <ClCompile Include="src\d3d12\D3D12Shader.cpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClCompile>
+    <ClCompile Include="src\d3d12\D3D12SwapChain.cpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dlph\cmd_list.cpp">
+      <Filter>Project\DolphicRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dlph\cmd_queue.cpp">
+      <Filter>Project\DolphicRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dlph\device.cpp">
+      <Filter>Project\DolphicRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dlph\renderer.cpp">
+      <Filter>Project\DolphicRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dlph\vsync.cpp">
+      <Filter>Project\DolphicRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\geo\fpln3.cpp">
+      <Filter>Project\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="src\geo\fray3.cpp">
+      <Filter>Project\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\fcomp.cpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\ferot.cpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\fmtx2x2.cpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\fmtx3x3.cpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\fmtx4x4.cpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\fquat.cpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\frot.cpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\fvec2.cpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\fvec3.cpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\fvec4.cpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\math.cpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\mathutil.cpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win\WinWindow.cpp">
+      <Filter>Project\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="src\times\clock.cpp">
+      <Filter>Project\Time Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\times\timer.cpp">
+      <Filter>Project\Time Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\structs\flt2.cpp">
+      <Filter>Project\Structure</Filter>
+    </ClCompile>
+    <ClCompile Include="src\structs\flt3.cpp">
+      <Filter>Project\Structure</Filter>
+    </ClCompile>
+    <ClCompile Include="src\structs\flt4.cpp">
+      <Filter>Project\Structure</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\intrin.cpp">
+      <Filter>Project\Mathematic</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\DirectXTex\include\DirectXTex.inl">
+      <Filter>Framework\DirectXTex</Filter>
+    </None>
+    <None Include="include\cont\array.inl">
+      <Filter>Project\Container</Filter>
+    </None>
+    <None Include="include\cont\vector.inl">
+      <Filter>Project\Container</Filter>
+    </None>
+    <None Include="include\d3d12\D3D12Buffer.inl">
+      <Filter>Project\Direct3D12</Filter>
+    </None>
+    <None Include="include\geo\bezier.inl">
+      <Filter>Project\Geometry</Filter>
+    </None>
+    <None Include="include\math\mathutil.inl">
+      <Filter>Project\Mathematic</Filter>
+    </None>
+    <None Include="include\util\utility.inl">
+      <Filter>Project\Utility</Filter>
+    </None>
+  </ItemGroup>
+</Project>
