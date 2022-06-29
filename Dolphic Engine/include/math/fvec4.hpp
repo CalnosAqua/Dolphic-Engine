@@ -2,30 +2,18 @@
  *	@brief	単精度浮動小数点数型の四次元ベクトルクラス
  */
 #pragma once
-#pragma warning(disable : 4201)
+#pragma warning(disable : 4324)
+#include "structs/flt4.hpp"
 #include <initializer_list>
 
 namespace dlph {
+	struct Float4;
+
 	/**	@class	FVector4
 	 *	@brief	単精度浮動小数点数型の四次元ベクトル
 	 */
-	class FVector4 final {
+	class alignas(16) FVector4 final : public Float4 {
 	public:
-		union {
-			//!	@brief	全成分
-			float alignas(16) p[4U];
-			struct {
-				//!	@brief	第一成分
-				float x;
-				//!	@brief	第二成分
-				float y;
-				//!	@brief	第三成分
-				float z;
-				//!	@brief	第四成分
-				float w;
-			};
-		};
-
 		//!	@brief	ムーブコンストラクタ
 		FVector4(FVector4&&) noexcept = default;
 		//!	@brief	コピーコンストラクタ
@@ -44,7 +32,7 @@ namespace dlph {
 		explicit FVector4(std::initializer_list<float> const&) noexcept;
 		//!	@brief	初期化子コンストラクタ
 		constexpr FVector4(float const& x, float const& y, float const& z, float const& w) noexcept :
-			p{ x, y, z, w }
+			Float4{ x, y, z, w }
 		{}
 
 		//!	@brief	複合加算演算子

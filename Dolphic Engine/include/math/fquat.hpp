@@ -3,29 +3,15 @@
  */
 #pragma once
 #pragma warning(disable : 4201)
+#include "structs/flt4.hpp"
 #include <initializer_list>
 
 namespace dlph {
 	/**	@class	FQuaternion
 	 *	@brief	単精度浮動小数点数型の四元数
 	 */
-	class FQuaternion final {
+	class alignas(16) FQuaternion final : public Float4 {
 	public:
-		union {
-			//!	@brief	全成分
-			float alignas(16) p[4U];
-			struct {
-				//!	@brief	第一虚数成分
-				float x;
-				//!	@brief	第二虚数成分
-				float y;
-				//!	@brief	第三虚数成分
-				float z;
-				//!	@brief	実数成分
-				float w;
-			};
-		};
-
 		//!	@brief	ムーブコンストラクタ
 		FQuaternion(FQuaternion&&) noexcept = default;
 		//!	@brief	コピーコンストラクタ
@@ -44,7 +30,7 @@ namespace dlph {
 		explicit FQuaternion(std::initializer_list<float> const&) noexcept;
 		//!	@brief	初期化子コンストラクタ
 		constexpr FQuaternion(float const& x, float const& y, float const& z, float const& w) noexcept :
-			p{ x, y, z, w }
+			Float4{ x, y, z, w }
 		{}
 
 		//!	@brief	複合加算演算子

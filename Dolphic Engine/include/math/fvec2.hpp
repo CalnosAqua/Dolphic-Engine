@@ -2,26 +2,18 @@
  *	@brief	単精度浮動小数点数型の二次元ベクトルクラス
  */
 #pragma once
-#pragma warning(disable : 4201)
+#pragma warning(disable : 4324)
+#include "structs/flt2.hpp"
 #include <initializer_list>
 
 namespace dlph {
+	struct Float2;
+
 	/**	@class	FVector2
 	 *	@brief	単精度浮動小数点数型の二次元ベクトル
 	 */
-	class FVector2 final {
+	class alignas(16) FVector2 final : public Float2 {
 	public:
-		union {
-			//!	@brief	全成分
-			float alignas(16) p[2U];
-			struct {
-				//!	@brief	第一成分
-				float x;
-				//!	@brief	第二成分
-				float y;
-			};
-		};
-
 		//!	@brief	ムーブコンストラクタ
 		FVector2(FVector2&&) noexcept = default;
 		//!	@brief	コピーコンストラクタ
@@ -40,7 +32,7 @@ namespace dlph {
 		explicit FVector2(std::initializer_list<float> const&) noexcept;
 		//!	@brief	初期化子コンストラクタ
 		constexpr FVector2(float const& x, float const& y) noexcept :
-			p{ x, y }
+			Float2{ x, y }
 		{}
 
 		//!	@brief	複合加算演算子

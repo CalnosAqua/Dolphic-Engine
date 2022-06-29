@@ -3,6 +3,8 @@
  */
 
 #include "geo/fpln3.hpp"
+#include "structs/flt3x3.hpp"
+#include "structs/flt3.hpp"
 #include <memory>
 
 namespace dlph {

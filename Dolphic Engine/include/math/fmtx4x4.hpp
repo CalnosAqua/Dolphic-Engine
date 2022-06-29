@@ -2,55 +2,19 @@
  *	@brief	単精度浮動小数点数型の四次正方行列クラス
  */
 #pragma once
-#pragma warning(disable : 4201)
-#include "math/fvec4.hpp"
+#pragma warning(disable : 4324)
+#include "structs/flt4x4.hpp"
 #include <initializer_list>
 
 namespace dlph {
+	struct Float4x4;
+	class FVector4;
+
 	/**	@class	FMatrix4x4
 	 *	@brief	単精度浮動小数点数型の四次正方行列
 	 */
-	class FMatrix4x4 final {
+	class alignas(16) FMatrix4x4 final : public Float4x4 {
 	public:
-		union {
-			//!	@brief	全成分
-			float alignas(16) p[16U];
-			struct {
-				//!	@brief	一行一列目の成分
-				float m00;
-				//!	@brief	一行二列目の成分
-				float m01;
-				//!	@brief	一行三列目の成分
-				float m02;
-				//!	@brief	一行四列目の成分
-				float m03;
-				//!	@brief	二行一列目の成分
-				float m10;
-				//!	@brief	二行二列目の成分
-				float m11;
-				//!	@brief	二行三列目の成分
-				float m12;
-				//!	@brief	二行四列目の成分
-				float m13;
-				//!	@brief	三行一列目の成分
-				float m20;
-				//!	@brief	三行二列目の成分
-				float m21;
-				//!	@brief	三行三列目の成分
-				float m22;
-				//!	@brief	三行四列目の成分
-				float m23;
-				//!	@brief	四行一列目の成分
-				float m30;
-				//!	@brief	四行二列目の成分
-				float m31;
-				//!	@brief	四行三列目の成分
-				float m32;
-				//!	@brief	四行四列目の成分
-				float m33;
-			};
-		};
-
 		//! @brief ムーブコンストラクタ
 		FMatrix4x4(FMatrix4x4&&) noexcept = default;
 		//! @brief コピーコンストラクタ
@@ -74,7 +38,7 @@ namespace dlph {
 			float const& m20, float const& m21, float const& m22, float const& m23,
 			float const& m30, float const& m31, float const& m32, float const& m33
 		) noexcept :
-			p{
+			Float4x4{
 			m00, m01, m02, m03,
 			m10, m11, m12, m13,
 			m20, m21, m22, m23,

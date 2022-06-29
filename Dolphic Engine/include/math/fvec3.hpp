@@ -2,29 +2,18 @@
  *	@brief	単精度浮動小数点数型の三次元ベクトルクラス
  */
 #pragma once
-#pragma warning(disable : 4201)
 #pragma warning(disable : 4324)
+#include "structs/flt3.hpp"
 #include <initializer_list>
 
 namespace dlph {
+	struct Float3;
+
 	/**	@class	FVector3
 	 *	@brief	単精度浮動小数点数型の三次元ベクトル
 	 */
-	class FVector3 final {
+	class alignas(16) FVector3 final : public Float3 {
 	public	:
-		union {
-			//!	@brief	全成分
-			float alignas(16) p[3U];
-			struct {
-				//!	@brief	第一成分
-				float x;
-				//!	@brief	第二成分
-				float y;
-				//!	@brief	第三成分
-				float z;
-			};
-		};
-
 		//!	@brief	ムーブコンストラクタ
 		FVector3(FVector3&&) noexcept = default;
 		//!	@brief	コピーコンストラクタ
@@ -43,7 +32,7 @@ namespace dlph {
 		explicit FVector3(std::initializer_list<float> const&) noexcept;
 		//!	@brief	初期化子コンストラクタ
 		constexpr FVector3(float const& x, float const& y, float const& z) noexcept :
-			p{ x, y, z }
+			Float3{ x, y, z }
 		{}
 
 		//!	@brief	複合加算演算子

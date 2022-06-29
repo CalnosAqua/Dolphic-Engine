@@ -2,26 +2,18 @@
  *	@brief	単精度浮動小数点数型の複素数クラス
  */
 #pragma once
-#pragma warning(disable : 4201)
+#pragma warning(disable : 4324)
+#include "structs/flt2.hpp"
 #include <initializer_list>
 
 namespace dlph {
+	struct Float2;
+
 	/**	@class	FComplex
 	 *	@brief	単精度浮動小数点数型の複素数
 	 */
-	class FComplex final {
+	class alignas(16) FComplex final : public Float2 {
 	public:
-		union {
-			//!	@brief	全成分
-			float alignas(16) p[2U];
-			struct {
-				//!	@brief	実数成分
-				float x;
-				//!	@brief	虚数成分
-				float y;
-			};
-		};
-
 		//!	@brief	ムーブコンストラクタ
 		FComplex(FComplex&&) noexcept = default;
 		//!	@brief	コピーコンストラクタ
@@ -40,7 +32,7 @@ namespace dlph {
 		explicit FComplex(std::initializer_list<float> const&) noexcept;
 		//!	@brief	初期化子コンストラクタ
 		constexpr FComplex(float const& x, float const& y) noexcept :
-			p{ x, y }
+			Float2{ x, y }
 		{}
 
 		//!	@brief	複合加算演算子

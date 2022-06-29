@@ -11,12 +11,12 @@ namespace dlph {
 	/**	@struct	Float4x4
 	 *	@brief	四次正方行列用構造体
 	 */
-	struct Float4x4 final {
+	struct Float4x4 {
 		union {
 			//!	@brief	全成分
 			float p[FLT4x4_CNT];
 			//!	@brief	全成分
-			float m[FLT4_CNT][FLT4_CNT];
+			float m[4U][4U];
 			struct {
 				//!	@brief	一行一列目の成分
 				float m00;

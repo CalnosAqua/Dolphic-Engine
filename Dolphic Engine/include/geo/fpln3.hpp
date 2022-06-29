@@ -2,11 +2,15 @@
  *	@brief	三次元平面方程式・接ベクトル行列クラス
  */
 #pragma once
-#include "math/fvec3.hpp"
-#include "math/fmtx3x3.hpp"
 #include "math/mathutil.hpp"
+#include "math/fmtx3x3.hpp"
+#include "math/fvec3.hpp"
 
 namespace dlph {
+	enum class HandSide;
+	class FMatrix3x3;
+	class FVector3;
+
 	/**	@class FPlane3
 	 *	@brief 三次元平面方程式・接ベクトル行列
 	 */

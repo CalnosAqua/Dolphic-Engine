@@ -11,7 +11,7 @@ namespace dlph {
 	/**	@struct	Float2
 	 *	@brief	二成分単精度浮動小数点数型
 	 */
-	struct Float2 final {
+	struct Float2 {
 		union {
 			//!	@brief	全成分
 			float p[FLT2_CNT];

@@ -1,7 +1,9 @@
 ﻿/**	@file	fmtx2x2.cpp
  *	@brief	単精度浮動小数点数用の二次正方行列クラス
  */
+#include "structs/flt2.hpp"
 #include "math/fmtx2x2.hpp"
+#include "math/fvec2.hpp"
 #include "math/math.hpp"
 #include "math/intrin.hpp"
 #include <array>

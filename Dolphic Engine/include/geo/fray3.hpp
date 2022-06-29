@@ -5,6 +5,8 @@
 #include "math/fvec3.hpp"
 
 namespace dlph {
+	class FVector3;
+
 	/**	@class	FRay3
 	 *	@brief	三次元光線
 	 */

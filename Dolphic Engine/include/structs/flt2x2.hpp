@@ -11,12 +11,12 @@ namespace dlph {
 	/**	@struct	Float2x2
 	 *	@brief	二次正方行列用構造体
 	 */
-	struct Float2x2 final {
+	struct Float2x2 {
 		union {
 			//!	@brief	全成分
 			float p[FLT2x2_CNT];
 			//!	@brief	全成分
-			float m[FLT2_CNT][FLT2_CNT];
+			float m[2U][2U];
 			struct {
 				//!	@brief	一行一列目の成分
 				float m00;

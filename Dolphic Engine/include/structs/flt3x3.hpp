@@ -11,12 +11,12 @@ namespace dlph {
 	/**	@struct	Float3x3
 	 *	@brief	三次正方行列用構造体
 	 */
-	struct Float3x3 final {
+	struct Float3x3 {
 		union {
 			//!	@brief	全成分
 			float p[FLT3x3_CNT];
 			//!	@brief	全成分
-			float m[FLT3_CNT][FLT3_CNT];
+			float m[3U][3U];
 			struct {
 				//!	@brief	一行一列目の成分
 				float m00;

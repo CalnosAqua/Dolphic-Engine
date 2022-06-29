@@ -1,7 +1,6 @@
 ﻿/**	@file	avfray3.hpp
  *	@brief	三次元光線クラス
  */
-
 #include "geo/fray3.hpp"
 
 namespace dlph {

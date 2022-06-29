@@ -2,31 +2,19 @@
  *	@brief	単精度浮動小数点数型の二次正方行列クラス
  */
 #pragma once
-#pragma warning(disable : 4201)
-#include "math/fvec2.hpp"
+#pragma warning(disable : 4324)
+#include "structs/flt2x2.hpp"
 #include <initializer_list>
 
 namespace dlph {
+	struct Float2x2;
+	class FVector2;
+
 	/**	@class	FMatrix2x2
 	 *	@brief	単精度浮動小数点数型の二次正方行列
 	 */
-	class FMatrix2x2 final {
+	class alignas(16) FMatrix2x2 final : public Float2x2 {
 	public:
-		union {
-			//!	@brief	全成分
-			float alignas(16) p[4U];
-			struct {
-				//!	@brief	一行一列目の成分
-				float m00;
-				//!	@brief	一行二列目の成分
-				float m01;
-				//!	@brief	二行一列目の成分
-				float m10;
-				//!	@brief	二行二列目の成分
-				float m11;
-			};
-		};
-
 		//! @brief ムーブコンストラクタ
 		FMatrix2x2(FMatrix2x2&&) noexcept = default;
 		//! @brief コピーコンストラクタ
@@ -48,7 +36,7 @@ namespace dlph {
 			float const& m00, float const& m01,
 			float const& m10, float const& m11
 		) noexcept :
-			p{
+			Float2x2{
 			m00, m01,
 			m10, m11 }
 		{}
