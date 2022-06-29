@@ -22,7 +22,7 @@ namespace dlph {
 		arg.m_rsrces.clear();
 	}
 
-	D3D12Buffer& D3D12Buffer::operator=(D3D12Buffer&& rhs) noexcept {
+	D3D12Buffer& D3D12Buffer::operator=(D3D12Buffer&& rhs) & noexcept {
 		m_heap = rhs.m_heap;
 		rhs.m_heap = nullptr;
 

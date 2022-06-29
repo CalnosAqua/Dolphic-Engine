@@ -16,9 +16,9 @@ namespace dlph {
 		//!	@brief コピーコンストラクタ
 		Clock(Clock const&) noexcept = default;
 		//!	@brief ムーブ代入演算子
-		Clock& operator=(Clock&&) noexcept = default;
+		Clock& operator=(Clock&&) & noexcept = default;
 		//!	@brief コピー代入演算子
-		Clock& operator=(Clock const&) noexcept = default;
+		Clock& operator=(Clock const&) & noexcept = default;
 
 		//!	@brief デフォルトコンストラクタ
 		Clock() noexcept;

@@ -30,9 +30,9 @@ namespace dlph {
 		//!	@brief	コピーコンストラクタ
 		FVector3(FVector3 const&) noexcept = default;
 		//!	@brief	ムーブ代入演算子
-		FVector3& operator=(FVector3&&) noexcept = default;
+		FVector3& operator=(FVector3&&) & noexcept = default;
 		//!	@brief	コピー代入演算子
-		FVector3& operator=(FVector3 const&) noexcept = default;
+		FVector3& operator=(FVector3 const&) & noexcept = default;
 
 		//!	@brief	デフォルトコンストラクタ
 		FVector3() noexcept;

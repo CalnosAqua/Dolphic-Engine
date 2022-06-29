@@ -1,4 +1,4 @@
-/**	@file	timer.hpp
+﻿/**	@file	timer.hpp
  *	@brief	汎用タイムスイッチクラス
  */
 #pragma once
@@ -15,9 +15,9 @@ namespace dlph {
 		//!	@brief	コピーコンストラクタ
 		Timer(Timer const&) noexcept = default;
 		//!	@brief	ムーブ代入演算子
-		Timer& operator=(Timer&&) noexcept = default;
+		Timer& operator=(Timer&&) & noexcept = default;
 		//!	@brief	コピー代入演算子
-		Timer& operator=(Timer const&) noexcept = default;
+		Timer& operator=(Timer const&) & noexcept = default;
 
 		//!	@brief	デフォルトコンストラクタ
 		Timer() noexcept;

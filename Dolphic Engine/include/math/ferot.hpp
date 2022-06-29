@@ -29,9 +29,9 @@ namespace dlph {
 		//! @brief コピーコンストラクタ
 		FEulerRotation(FEulerRotation const&) noexcept = default;
 		//! @brief ムーブ代入演算子
-		FEulerRotation& operator=(FEulerRotation&&) noexcept = default;
+		FEulerRotation& operator=(FEulerRotation&&) & noexcept = default;
 		//! @brief コピー代入演算子
-		FEulerRotation& operator=(FEulerRotation const&) noexcept = default;
+		FEulerRotation& operator=(FEulerRotation const&) & noexcept = default;
 
 		//! @brief デフォルトコンストラクタ
 		FEulerRotation() noexcept;

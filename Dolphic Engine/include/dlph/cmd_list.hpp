@@ -13,7 +13,7 @@ namespace dlph {
 		//!	@brief	ムーブコンストラクタ
 		CommandList(CommandList&&) noexcept = default;
 		//!	@brief	ムーブ代入演算子
-		CommandList& operator=(CommandList&&) &noexcept = default;
+		CommandList& operator=(CommandList&&) & noexcept = default;
 
 		//!	@brief	デフォルトコンストラクタ
 		CommandList() noexcept;

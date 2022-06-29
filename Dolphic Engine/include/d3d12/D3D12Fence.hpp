@@ -1,4 +1,4 @@
-/**	@file	D3D12Fence.hpp
+﻿/**	@file	D3D12Fence.hpp
  *	@brief	フェンス
  */
 #pragma once
@@ -17,7 +17,7 @@ namespace dlph {
 		//!	@brief	ムーブコンストラクタ
 		D3D12Fence(D3D12Fence&&) noexcept;
 		//!	@brief	ムーブ代入演算子
-		D3D12Fence& operator=(D3D12Fence&&) noexcept;
+		D3D12Fence& operator=(D3D12Fence&&) &  noexcept;
 		
 		//!	@brief	デフォルトコンストラクタ
 		D3D12Fence() noexcept;

@@ -15,7 +15,7 @@ namespace dlph {
 		arg.m_shader = nullptr;
 	}
 
-	D3D12Shader& D3D12Shader::operator=(D3D12Shader&& rhs) noexcept {
+	D3D12Shader& D3D12Shader::operator=(D3D12Shader&& rhs) & noexcept {
 		uninit();
 
 		m_shader = rhs.m_shader;

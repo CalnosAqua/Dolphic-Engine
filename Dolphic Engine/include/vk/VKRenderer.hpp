@@ -2,7 +2,7 @@
  *	@brief	Vulkan 用レンダラ
  */
 #pragma once
-#include "util/singleton.hpp"
+#include "ifs/singleton.hpp"
 
 namespace dlph {
 	/**	@file	VKRenderer

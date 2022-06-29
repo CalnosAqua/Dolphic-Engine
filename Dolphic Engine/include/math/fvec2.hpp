@@ -27,9 +27,9 @@ namespace dlph {
 		//!	@brief	コピーコンストラクタ
 		FVector2(FVector2 const&) noexcept = default;
 		//!	@brief	ムーブ代入演算子
-		FVector2& operator=(FVector2&&) noexcept = default;
+		FVector2& operator=(FVector2&&) &noexcept = default;
 		//!	@brief	コピー代入演算子
-		FVector2& operator=(FVector2 const&) noexcept = default;
+		FVector2& operator=(FVector2 const&) & noexcept = default;
 
 		//!	@brief	デフォルトコンストラクタ
 		FVector2() noexcept;

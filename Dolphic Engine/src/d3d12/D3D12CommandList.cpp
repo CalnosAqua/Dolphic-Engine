@@ -1,4 +1,4 @@
-/**	@file	D3D12CommandList.cpp
+﻿/**	@file	D3D12CommandList.cpp
  *	@brief	Direct3D12 用のコマンドリスト
  */
 
@@ -16,7 +16,7 @@ namespace dlph {
 		arg.m_list = nullptr;
 	}
 
-	D3D12CommandList& D3D12CommandList::operator=(D3D12CommandList&& rhs) noexcept {
+	D3D12CommandList& D3D12CommandList::operator=(D3D12CommandList&& rhs) & noexcept {
 		exit();
 
 		m_alloc = rhs.m_alloc;

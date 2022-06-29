@@ -31,9 +31,9 @@ namespace dlph {
 		//!	@brief	コピーコンストラクタ
 		FQuaternion(FQuaternion const&) noexcept = default;
 		//!	@brief	ムーブ代入演算子
-		FQuaternion& operator=(FQuaternion&&) noexcept = default;
+		FQuaternion& operator=(FQuaternion&&) & noexcept = default;
 		//!	@brief	コピー代入演算子
-		FQuaternion& operator=(FQuaternion const&) noexcept = default;
+		FQuaternion& operator=(FQuaternion const&) & noexcept = default;
 
 		//!	@brief	デフォルトコンストラクタ
 		FQuaternion() noexcept;

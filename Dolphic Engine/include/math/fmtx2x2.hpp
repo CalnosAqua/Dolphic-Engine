@@ -32,9 +32,9 @@ namespace dlph {
 		//! @brief コピーコンストラクタ
 		FMatrix2x2(FMatrix2x2 const&) noexcept = default;
 		//! @brief ムーブ代入演算子
-		FMatrix2x2& operator=(FMatrix2x2&&) noexcept = default;
+		FMatrix2x2& operator=(FMatrix2x2&&) & noexcept = default;
 		//! @brief コピー代入演算子
-		FMatrix2x2& operator=(FMatrix2x2 const&) noexcept = default;
+		FMatrix2x2& operator=(FMatrix2x2 const&) & noexcept = default;
 
 		//! @brief デフォルトコンストラクタ
 		FMatrix2x2() noexcept;

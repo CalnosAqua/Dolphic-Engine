@@ -1,4 +1,4 @@
-/**	@file	D3D12ResourceBarrier.hpp
+﻿/**	@file	D3D12ResourceBarrier.hpp
  *	@brief	Direct3D12 用のリソースバリアクラス宣言ファイル
  */
 #pragma once
@@ -17,9 +17,9 @@ namespace dlph {
 		//!	@brief	コピーコンストラクタ
 		D3D12ResourceBarrier(D3D12ResourceBarrier const&) noexcept = default;
 		//!	@brief	ムーブコンストラクタ
-		D3D12ResourceBarrier& operator=(D3D12ResourceBarrier&&) noexcept = default;
+		D3D12ResourceBarrier& operator=(D3D12ResourceBarrier&&) & noexcept = default;
 		//!	@brief	コピーコンストラクタ
-		D3D12ResourceBarrier& operator=(D3D12ResourceBarrier const&) noexcept = default;
+		D3D12ResourceBarrier& operator=(D3D12ResourceBarrier const&) & noexcept = default;
 
 		//!	@brief	デフォルトコンストラクタ
 		D3D12ResourceBarrier() noexcept;

@@ -438,6 +438,7 @@
     <ClInclude Include="include\structs\flt3x3.hpp" />
     <ClInclude Include="include\structs\flt4.hpp" />
     <ClInclude Include="include\structs\flt4x4.hpp" />
+    <ClInclude Include="include\structs\flts.hpp" />
     <ClInclude Include="include\times\clock.hpp" />
     <ClInclude Include="include\times\timer.hpp" />
     <ClInclude Include="include\util\utility.hpp" />
@@ -496,9 +497,7 @@
     <ClCompile Include="src\math\intrin.cpp" />
     <ClCompile Include="src\math\math.cpp" />
     <ClCompile Include="src\math\mathutil.cpp" />
-    <ClCompile Include="src\structs\flt2.cpp" />
-    <ClCompile Include="src\structs\flt3.cpp" />
-    <ClCompile Include="src\structs\flt4.cpp" />
+    <ClCompile Include="src\structs\flts.cpp" />
     <ClCompile Include="src\times\clock.cpp" />
     <ClCompile Include="src\times\timer.cpp" />
     <ClCompile Include="src\win\WinWindow.cpp" />

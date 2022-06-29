@@ -1,4 +1,4 @@
-/**	@file	D3D12Fence.cpp
+﻿/**	@file	D3D12Fence.cpp
  *	@brief	フェンス
  */
 
@@ -19,7 +19,7 @@ namespace dlph {
 		m_signal = arg.m_signal;
 	}
 
-	D3D12Fence& D3D12Fence::operator=(D3D12Fence&& rhs) noexcept {
+	D3D12Fence& D3D12Fence::operator=(D3D12Fence&& rhs) & noexcept {
 		exit();
 
 		m_fence = rhs.m_fence;

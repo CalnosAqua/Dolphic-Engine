@@ -177,19 +177,10 @@
     <ClInclude Include="include\structs\flt2.hpp">
       <Filter>Project\Structure</Filter>
     </ClInclude>
-    <ClInclude Include="include\structs\flt2x2.hpp">
-      <Filter>Project\Structure</Filter>
-    </ClInclude>
     <ClInclude Include="include\structs\flt3.hpp">
       <Filter>Project\Structure</Filter>
     </ClInclude>
-    <ClInclude Include="include\structs\flt3x3.hpp">
-      <Filter>Project\Structure</Filter>
-    </ClInclude>
     <ClInclude Include="include\structs\flt4.hpp">
-      <Filter>Project\Structure</Filter>
-    </ClInclude>
-    <ClInclude Include="include\structs\flt4x4.hpp">
       <Filter>Project\Structure</Filter>
     </ClInclude>
     <ClInclude Include="include\times\clock.hpp">
@@ -212,6 +203,18 @@
     </ClInclude>
     <ClInclude Include="include\math\intrin.hpp">
       <Filter>Project\Mathematic</Filter>
+    </ClInclude>
+    <ClInclude Include="include\structs\flt4x4.hpp">
+      <Filter>Project\Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include\structs\flts.hpp">
+      <Filter>Project\Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include\structs\flt3x3.hpp">
+      <Filter>Project\Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include\structs\flt2x2.hpp">
+      <Filter>Project\Structure</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -317,17 +320,11 @@
     <ClCompile Include="src\times\timer.cpp">
       <Filter>Project\Time Manager</Filter>
     </ClCompile>
-    <ClCompile Include="src\structs\flt2.cpp">
-      <Filter>Project\Structure</Filter>
-    </ClCompile>
-    <ClCompile Include="src\structs\flt3.cpp">
-      <Filter>Project\Structure</Filter>
-    </ClCompile>
-    <ClCompile Include="src\structs\flt4.cpp">
-      <Filter>Project\Structure</Filter>
-    </ClCompile>
     <ClCompile Include="src\math\intrin.cpp">
       <Filter>Project\Mathematic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\structs\flts.cpp">
+      <Filter>Project\Structure</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

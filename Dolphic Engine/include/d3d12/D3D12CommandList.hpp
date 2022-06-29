@@ -17,7 +17,7 @@ namespace dlph {
 		//!	@brief	ムーブコンストラクタ
 		D3D12CommandList(D3D12CommandList&&) noexcept;
 		//!	@brief	ムーブ代入演算子
-		D3D12CommandList& operator=(D3D12CommandList&&) noexcept;
+		D3D12CommandList& operator=(D3D12CommandList&&) & noexcept;
 
 		//!	@brief	デフォルトコンストラクタ
 		D3D12CommandList() noexcept;

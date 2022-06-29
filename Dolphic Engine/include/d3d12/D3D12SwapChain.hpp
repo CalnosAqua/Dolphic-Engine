@@ -1,4 +1,4 @@
-/**	@file	D3D12SwapChain.hpp
+﻿/**	@file	D3D12SwapChain.hpp
  *	@brief	スワップチェイン
  */
 #pragma once
@@ -33,7 +33,7 @@ namespace dlph {
 		//!	@brief	ムーブコンストラクタ
 		D3D12SwapChain(D3D12SwapChain&&) noexcept;
 		//!	@brief	ムーブ代入演算子
-		D3D12SwapChain& operator=(D3D12SwapChain&&) noexcept;
+		D3D12SwapChain& operator=(D3D12SwapChain&&) & noexcept;
 		
 		//!	@brief	デフォルトコンストラクタ
 		D3D12SwapChain() noexcept;

@@ -37,7 +37,7 @@ namespace dlph {
 		//!	@brief	ムーブコンストラクタ
 		D3D12Renderer(D3D12Renderer&&) noexcept = default;
 		//!	@brief	ムーブ代入演算子
-		D3D12Renderer& operator=(D3D12Renderer&&) noexcept = default;
+		D3D12Renderer& operator=(D3D12Renderer&&) & noexcept = default;
 
 		//!	@brief	デフォルトコンストラクタ
 		D3D12Renderer() noexcept;

@@ -31,7 +31,7 @@ namespace dlph {
 		//!	@brief	ムーブコンストラクタ
 		D3D12Buffer(D3D12Buffer&&) noexcept;
 		//!	@brief	ムーブ代入演算子
-		D3D12Buffer& operator=(D3D12Buffer&&) noexcept;
+		D3D12Buffer& operator=(D3D12Buffer&&) & noexcept;
 
 		//!	@brief	デフォルトコンストラクタ
 		D3D12Buffer() noexcept;

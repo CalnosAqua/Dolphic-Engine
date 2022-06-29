@@ -56,9 +56,9 @@ namespace dlph {
 		//! @brief コピーコンストラクタ
 		FMatrix4x4(FMatrix4x4 const&) noexcept = default;
 		//! @brief ムーブ代入演算子
-		FMatrix4x4& operator=(FMatrix4x4&&) noexcept = default;
+		FMatrix4x4& operator=(FMatrix4x4&&) & noexcept = default;
 		//! @brief コピー代入演算子
-		FMatrix4x4& operator=(FMatrix4x4 const&) noexcept = default;
+		FMatrix4x4& operator=(FMatrix4x4 const&) & noexcept = default;
 
 		//! @brief デフォルトコンストラクタ
 		FMatrix4x4() noexcept;

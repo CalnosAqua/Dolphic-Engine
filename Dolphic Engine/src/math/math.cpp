@@ -2,16 +2,9 @@
  *	@brief	数学系関数群
  */
 #include "math/math.hpp"
+#include "math/intrin.hpp"
 #include <numeric>
 #include <cfloat>
-
-#if defined(_M_IX86) || defined(_M_X64)
-#	include <immintrin.h>
-#elif defined(_M_ARM64)
-#	include <arm64_neon.h>
-#elif defined(_M_ARM)
-#	include <arm_neon.h>
-#endif
 
 namespace dlph {
 	template <>
@@ -253,57 +246,29 @@ namespace dlph {
 		return result;
 	}
 
-#	if defined(_M_IX86) || defined(_M_X64)
 	template <>
-	__m128 const Math<__m128>::sum(__m128 const* const& ptr, size_t const& cnt, bool const& is_speedy) noexcept {
-		__m128 result = _mm_set1_ps(0.0f);
+	vctr const Math<vctr>::sum(vctr const* const& ptr, size_t const& cnt, bool const& is_speedy) noexcept {
+		vctr result = set1(0.0f);
 
 		if (is_speedy) {
 			//	単純に加算する方法
 			for (size_t idx = 0U; idx < cnt; idx++) {
-				result = _mm_add_ps(result, *(ptr + idx));
+				result = add(result, *(ptr + idx));
 			}
 		}
 		else {
 			//	カハンの加算アルゴリズムを利用した方法
-			__m128 y, c, t;
-			c = _mm_set1_ps(0.0f);
+			vctr y, c, t;
+			c = set1(0.0f);
 
 			for (size_t idx = 0U; idx < cnt; idx++) {
-				y = _mm_sub_ps(*(ptr + idx), c);
-				t = _mm_add_ps(result, y);
-				c = _mm_sub_ps(_mm_sub_ps(t, result), y);
+				y = sub(*(ptr + idx), c);
+				t = add(result, y);
+				c = sub(sub(t, result), y);
 				result = t;
 			}
 		}
 
 		return result;
 	}
-#	elif defined(_M_ARM) || defined(_M_ARM64)
-	template <>
-	float32x4_t const Math<float32x4_t>::sum(float32x4_t const* const& ptr, size_t const& cnt, bool const& is_speedy) noexcept {
-		float32x4_t result = vdupq_n_f32(0.0f);
-
-		if (is_speedy) {
-			//	単純に加算する方法
-			for (size_t idx = 0U; idx < cnt; idx++) {
-				result = vaddq_f32(result, *(ptr + idx));
-			}
-		}
-		else {
-			//	カハンの加算アルゴリズムを利用した方法
-			float32x4_t y, c, t;
-			c = vdupq_n_f32(0.0f);
-
-			for (size_t idx = 0U; idx < cnt; idx++) {
-				y = vsubq_f32(*(ptr + idx), c);
-				t = vaddq_f32(result, y);
-				c = vsubq_f32(vsubq_f32(t, result), y);
-				result = t;
-			}
-		}
-
-		return result;
-	}
-#	endif
 }

@@ -14,9 +14,9 @@ namespace dlph {
 		//!	@brief	コピーコンストラクタ
 		FRotation(FRotation const&) noexcept = default;
 		//!	@brief	ムーブ代入演算子
-		FRotation& operator=(FRotation&&) noexcept = default;
+		FRotation& operator=(FRotation&&) & noexcept = default;
 		//!	@brief	コピー代入演算子
-		FRotation& operator=(FRotation const&) noexcept = default;
+		FRotation& operator=(FRotation const&) & noexcept = default;
 
 		//!	@brief	デフォルトコンストラクタ
 		FRotation() noexcept;

@@ -1,4 +1,4 @@
-/**	@file	D3D12CommandQueue.cpp
+﻿/**	@file	D3D12CommandQueue.cpp
  *	@brief	Direct3D12 用のコマンドキュークラス
  */
 
@@ -14,7 +14,7 @@ namespace dlph {
 		arg.m_queue = nullptr;
 	}
 
-	D3D12CommandQueue& D3D12CommandQueue::operator=(D3D12CommandQueue&& rhs) noexcept {
+	D3D12CommandQueue& D3D12CommandQueue::operator=(D3D12CommandQueue&& rhs) & noexcept {
 		exit();
 		
 		m_queue = rhs.m_queue;

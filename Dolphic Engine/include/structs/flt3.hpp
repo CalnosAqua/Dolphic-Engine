@@ -4,14 +4,17 @@
 #pragma once
 #pragma warning(disable : 4201)
 
-namespace {
+namespace dlph {
+	//!	@brief	成分数
+	static unsigned int constexpr FLT3_CNT = 3U;
+
 	/**	@struct	Float3
 	 *	@brief	三成分単精度浮動小数点数型
 	 */
-	struct Float3 {
+	struct Float3 final {
 		union {
 			//!	@brief	全成分
-			float p[3U];
+			float p[FLT3_CNT];
 			struct {
 				//!	@brief	第一成分
 				float x;
@@ -22,9 +25,4 @@ namespace {
 			};
 		};
 	};
-
-	/**	@brief	設定関数
-	 *	@return	設定した値
-	 */
-	Float3 constexpr set(float const& x = 0.0f, float const& y = 0.0f, float const& z = 0.0f) noexcept;
 }

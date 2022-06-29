@@ -14,7 +14,7 @@ namespace dlph {
 		arg.m_chain = nullptr;
 	}
 
-	D3D12SwapChain& D3D12SwapChain::operator=(D3D12SwapChain&& rhs) noexcept {
+	D3D12SwapChain& D3D12SwapChain::operator=(D3D12SwapChain&& rhs) & noexcept {
 		exit();
 
 		m_chain = rhs.m_chain;

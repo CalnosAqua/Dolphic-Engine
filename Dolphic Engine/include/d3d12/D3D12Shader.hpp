@@ -16,7 +16,7 @@ namespace dlph {
 		//!	@brief	ムーブコンストラクタ
 		D3D12Shader(D3D12Shader&&) noexcept;
 		//!	@brief	ムーブ代入演算子
-		D3D12Shader& operator=(D3D12Shader&&) noexcept;
+		D3D12Shader& operator=(D3D12Shader&&) & noexcept;
 		
 		//!	@brief	デフォルトコンストラクタ
 		D3D12Shader() noexcept;

@@ -27,9 +27,9 @@ namespace dlph {
 		//!	@brief	コピーコンストラクタ
 		FComplex(FComplex const&) noexcept = default;
 		//!	@brief	ムーブ代入演算子
-		FComplex& operator=(FComplex&&) noexcept = default;
+		FComplex& operator=(FComplex&&) & noexcept = default;
 		//!	@brief	コピー代入演算子
-		FComplex& operator=(FComplex const&) noexcept = default;
+		FComplex& operator=(FComplex const&) & noexcept = default;
 
 		//!	@brief	デフォルトコンストラクタ
 		FComplex() noexcept;
