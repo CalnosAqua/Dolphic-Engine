@@ -73,6 +73,13 @@ namespace dlph {
 		 *	@return 計算結果
 		 */
 		static T const loop(T const& value, T const& min, T const& max) noexcept;
+
+		/** @brief バーンシュタイン関数
+		 *	@param[in] n	基準の値
+		 *	@param[in] k	対象の値
+		 *	@param[in] t	割合 (0.0 から 1.0 までの間の値)
+		 */
+		static T const bern(size_t const& n, size_t const& k, T const& t) noexcept;
 	};
 
 	template<typename T>

@@ -126,6 +126,22 @@ namespace dlph {
 		return result;
 	}
 
+	template<>
+	float const Math<float>::bern(size_t const& n, size_t const& k, float const& t) noexcept {
+		float result = 1.0f;
+		if (k <= n) {
+			//	組み合わせを求める
+			size_t tmp = 1U;
+			for (size_t i = 1U; i < k; i++) {
+				tmp *= (n + 1 - i) / i;
+			}
+			//	組み合わせからベルンシュタイン多項式を求める。
+			float rate = clamp(t, 0.0f, 1.0f);
+			result = static_cast<float>(tmp) * powf(rate, static_cast<float>(k)) * powf((1.0f - rate), static_cast<float>(n - k));
+		}
+		return result;
+	}
+
 
 	template <>
 	int const Math<double>::compare(double const& lhs, double const& rhs) noexcept {
@@ -242,6 +258,22 @@ namespace dlph {
 		}
 		while (compare(result, mx) > 0) {
 			result = sum({ -length, result });
+		}
+		return result;
+	}
+
+	template<>
+	double const Math<double>::bern(size_t const& n, size_t const& k, double const& t) noexcept {
+		double result = 1.0;
+		if (k <= n) {
+			//	組み合わせを求める
+			size_t tmp = 1U;
+			for (size_t i = 1U; i < k; i++) {
+				tmp *= (n + 1 - i) / i;
+			}
+			//	組み合わせからベルンシュタイン多項式を求める。
+			double rate = clamp(t, 0.0, 1.0);
+			result = static_cast<double>(tmp) * pow(rate, static_cast<double>(k)) * pow((1.0f - rate), static_cast<double>(n - k));
 		}
 		return result;
 	}

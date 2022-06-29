@@ -412,9 +412,7 @@
     <ClInclude Include="include\dlph\device.hpp" />
     <ClInclude Include="include\dlph\renderer.hpp" />
     <ClInclude Include="include\dlph\vsync.hpp" />
-    <ClInclude Include="include\geo\bezier.hpp" />
-    <ClInclude Include="include\geo\fpln3.hpp" />
-    <ClInclude Include="include\geo\fray3.hpp" />
+    <ClInclude Include="include\gmtry\fray.hpp" />
     <ClInclude Include="include\ifs\noncopyable.hpp" />
     <ClInclude Include="include\ifs\nonmovable.hpp" />
     <ClInclude Include="include\ifs\sharable.hpp" />
@@ -482,8 +480,6 @@
     <ClCompile Include="src\dlph\device.cpp" />
     <ClCompile Include="src\dlph\renderer.cpp" />
     <ClCompile Include="src\dlph\vsync.cpp" />
-    <ClCompile Include="src\geo\fpln3.cpp" />
-    <ClCompile Include="src\geo\fray3.cpp" />
     <ClCompile Include="src\math\fcomp.cpp" />
     <ClCompile Include="src\math\ferot.cpp" />
     <ClCompile Include="src\math\fmtx2x2.cpp" />
@@ -517,7 +513,6 @@
     <None Include="include\cont\array.inl" />
     <None Include="include\cont\vector.inl" />
     <None Include="include\d3d12\D3D12Buffer.inl" />
-    <None Include="include\geo\bezier.inl" />
     <None Include="include\math\mathutil.inl" />
     <None Include="include\util\utility.inl" />
   </ItemGroup>

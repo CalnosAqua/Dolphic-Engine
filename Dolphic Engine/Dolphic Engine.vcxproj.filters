@@ -117,15 +117,6 @@
     <ClInclude Include="include\dlph\vsync.hpp">
       <Filter>Project\DolphicRenderer</Filter>
     </ClInclude>
-    <ClInclude Include="include\geo\bezier.hpp">
-      <Filter>Project\Geometry</Filter>
-    </ClInclude>
-    <ClInclude Include="include\geo\fpln3.hpp">
-      <Filter>Project\Geometry</Filter>
-    </ClInclude>
-    <ClInclude Include="include\geo\fray3.hpp">
-      <Filter>Project\Geometry</Filter>
-    </ClInclude>
     <ClInclude Include="include\ifs\noncopyable.hpp">
       <Filter>Project\Interface</Filter>
     </ClInclude>
@@ -216,6 +207,9 @@
     <ClInclude Include="include\structs\flt2x2.hpp">
       <Filter>Project\Structure</Filter>
     </ClInclude>
+    <ClInclude Include="include\gmtry\fray.hpp">
+      <Filter>Project\Geometry</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -268,12 +262,6 @@
     </ClCompile>
     <ClCompile Include="src\dlph\vsync.cpp">
       <Filter>Project\DolphicRenderer</Filter>
-    </ClCompile>
-    <ClCompile Include="src\geo\fpln3.cpp">
-      <Filter>Project\Geometry</Filter>
-    </ClCompile>
-    <ClCompile Include="src\geo\fray3.cpp">
-      <Filter>Project\Geometry</Filter>
     </ClCompile>
     <ClCompile Include="src\math\fcomp.cpp">
       <Filter>Project\Mathematic</Filter>
@@ -339,9 +327,6 @@
     </None>
     <None Include="include\d3d12\D3D12Buffer.inl">
       <Filter>Project\Direct3D12</Filter>
-    </None>
-    <None Include="include\geo\bezier.inl">
-      <Filter>Project\Geometry</Filter>
     </None>
     <None Include="include\math\mathutil.inl">
       <Filter>Project\Mathematic</Filter>
