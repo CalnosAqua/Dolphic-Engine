@@ -394,7 +394,6 @@
     <ClInclude Include="..\DirectXTex\include\DirectXTex.h" />
     <ClInclude Include="..\DirectXTex\include\WICTextureLoader12.h" />
     <ClInclude Include="include\cont\array.hpp" />
-    <ClInclude Include="include\cont\vector.hpp" />
     <ClInclude Include="include\d3d12\D3D12Buffer.hpp" />
     <ClInclude Include="include\d3d12\D3D12CommandList.hpp" />
     <ClInclude Include="include\d3d12\D3D12CommandQueue.hpp" />
@@ -510,11 +509,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\DirectXTex\include\DirectXTex.inl" />
-    <None Include="include\cont\array.inl" />
-    <None Include="include\cont\vector.inl" />
-    <None Include="include\d3d12\D3D12Buffer.inl" />
-    <None Include="include\math\mathutil.inl" />
-    <None Include="include\util\utility.inl" />
+    <ClInclude Include="include\cont\array.inl">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\D3D12Buffer.inl">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="include\math\mathutil.inl">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="include\util\utility.inl">
+      <FileType>Document</FileType>
+    </ClInclude>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

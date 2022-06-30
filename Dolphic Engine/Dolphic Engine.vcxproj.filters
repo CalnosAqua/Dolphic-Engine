@@ -66,9 +66,6 @@
     <ClInclude Include="include\cont\array.hpp">
       <Filter>Project\Container</Filter>
     </ClInclude>
-    <ClInclude Include="include\cont\vector.hpp">
-      <Filter>Project\Container</Filter>
-    </ClInclude>
     <ClInclude Include="include\d3d12\D3D12Buffer.hpp">
       <Filter>Project\Direct3D12</Filter>
     </ClInclude>
@@ -210,6 +207,18 @@
     <ClInclude Include="include\gmtry\fray.hpp">
       <Filter>Project\Geometry</Filter>
     </ClInclude>
+    <ClInclude Include="include\cont\array.inl">
+      <Filter>Project\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\D3D12Buffer.inl">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="include\math\mathutil.inl">
+      <Filter>Project\Mathematic</Filter>
+    </ClInclude>
+    <ClInclude Include="include\util\utility.inl">
+      <Filter>Project\Utility</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -318,21 +327,6 @@
   <ItemGroup>
     <None Include="..\DirectXTex\include\DirectXTex.inl">
       <Filter>Framework\DirectXTex</Filter>
-    </None>
-    <None Include="include\cont\array.inl">
-      <Filter>Project\Container</Filter>
-    </None>
-    <None Include="include\cont\vector.inl">
-      <Filter>Project\Container</Filter>
-    </None>
-    <None Include="include\d3d12\D3D12Buffer.inl">
-      <Filter>Project\Direct3D12</Filter>
-    </None>
-    <None Include="include\math\mathutil.inl">
-      <Filter>Project\Mathematic</Filter>
-    </None>
-    <None Include="include\util\utility.inl">
-      <Filter>Project\Utility</Filter>
     </None>
   </ItemGroup>
 </Project>
