@@ -63,12 +63,6 @@
     <ClInclude Include="..\DirectXTex\include\WICTextureLoader12.h">
       <Filter>Framework\DirectXTex</Filter>
     </ClInclude>
-    <ClInclude Include="include\cont\array.hpp">
-      <Filter>Project\Container</Filter>
-    </ClInclude>
-    <ClInclude Include="include\cont\vector.hpp">
-      <Filter>Project\Container</Filter>
-    </ClInclude>
     <ClInclude Include="include\d3d12\D3D12Buffer.hpp">
       <Filter>Project\Direct3D12</Filter>
     </ClInclude>
@@ -210,6 +204,9 @@
     <ClInclude Include="include\gmtry\fray.hpp">
       <Filter>Project\Geometry</Filter>
     </ClInclude>
+    <ClInclude Include="include\gmtry\fpln3.hpp">
+      <Filter>Project\Geometry</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -314,16 +311,13 @@
     <ClCompile Include="src\structs\flts.cpp">
       <Filter>Project\Structure</Filter>
     </ClCompile>
+    <ClCompile Include="include\gmtry\fpln3.cpp">
+      <Filter>Project\Geometry</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\DirectXTex\include\DirectXTex.inl">
       <Filter>Framework\DirectXTex</Filter>
-    </None>
-    <None Include="include\cont\array.inl">
-      <Filter>Project\Container</Filter>
-    </None>
-    <None Include="include\cont\vector.inl">
-      <Filter>Project\Container</Filter>
     </None>
     <None Include="include\d3d12\D3D12Buffer.inl">
       <Filter>Project\Direct3D12</Filter>
@@ -333,6 +327,9 @@
     </None>
     <None Include="include\util\utility.inl">
       <Filter>Project\Utility</Filter>
+    </None>
+    <None Include="include\gmtry\fray.inl">
+      <Filter>Project\Geometry</Filter>
     </None>
   </ItemGroup>
 </Project>

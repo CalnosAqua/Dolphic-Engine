@@ -32,6 +32,10 @@ namespace dlph {
 		//! @brief 初期化子コンストラクタ
 		explicit FMatrix3x3(std::initializer_list<float> const&) noexcept;
 		//! @brief コンストラクタ
+		constexpr FMatrix3x3(Float3x3 const& arg) noexcept :
+			Float3x3(arg)
+		{}
+		//! @brief コンストラクタ
 		constexpr FMatrix3x3(
 			float const& m00, float const& m01, float const& m02,
 			float const& m10, float const& m11, float const& m12,

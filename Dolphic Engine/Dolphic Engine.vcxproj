@@ -393,8 +393,6 @@
     <ClInclude Include="..\DirectXTex\include\DDSTextureLoader12.h" />
     <ClInclude Include="..\DirectXTex\include\DirectXTex.h" />
     <ClInclude Include="..\DirectXTex\include\WICTextureLoader12.h" />
-    <ClInclude Include="include\cont\array.hpp" />
-    <ClInclude Include="include\cont\vector.hpp" />
     <ClInclude Include="include\d3d12\D3D12Buffer.hpp" />
     <ClInclude Include="include\d3d12\D3D12CommandList.hpp" />
     <ClInclude Include="include\d3d12\D3D12CommandQueue.hpp" />
@@ -412,6 +410,7 @@
     <ClInclude Include="include\dlph\device.hpp" />
     <ClInclude Include="include\dlph\renderer.hpp" />
     <ClInclude Include="include\dlph\vsync.hpp" />
+    <ClInclude Include="include\gmtry\fpln3.hpp" />
     <ClInclude Include="include\gmtry\fray.hpp" />
     <ClInclude Include="include\ifs\noncopyable.hpp" />
     <ClInclude Include="include\ifs\nonmovable.hpp" />
@@ -466,6 +465,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="include\gmtry\fpln3.cpp" />
     <ClCompile Include="src\d3d12\D3D12Buffer.cpp" />
     <ClCompile Include="src\d3d12\D3D12CommandList.cpp" />
     <ClCompile Include="src\d3d12\D3D12CommandQueue.cpp" />
@@ -510,9 +510,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\DirectXTex\include\DirectXTex.inl" />
-    <None Include="include\cont\array.inl" />
-    <None Include="include\cont\vector.inl" />
     <None Include="include\d3d12\D3D12Buffer.inl" />
+    <None Include="include\gmtry\fray.inl" />
     <None Include="include\math\mathutil.inl" />
     <None Include="include\util\utility.inl" />
   </ItemGroup>

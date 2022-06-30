@@ -32,6 +32,10 @@ namespace dlph {
 		//! @brief 初期化子コンストラクタ
 		explicit FMatrix2x2(std::initializer_list<float> const&) noexcept;
 		//! @brief コンストラクタ
+		constexpr FMatrix2x2(Float2x2 const& arg) noexcept :
+			Float2x2(arg)
+		{}
+		//! @brief コンストラクタ
 		constexpr FMatrix2x2(
 			float const& m00, float const& m01,
 			float const& m10, float const& m11

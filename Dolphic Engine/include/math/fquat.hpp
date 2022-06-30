@@ -28,7 +28,11 @@ namespace dlph {
 
 		//!	@brief	初期化子コンストラクタ
 		explicit FQuaternion(std::initializer_list<float> const&) noexcept;
-		//!	@brief	初期化子コンストラクタ
+		//!	@brief	コンストラクタ
+		constexpr FQuaternion(Float4 const& arg) noexcept :
+			Float4(arg)
+		{}
+		//!	@brief	コンストラクタ
 		constexpr FQuaternion(float const& x, float const& y, float const& z, float const& w) noexcept :
 			Float4{ x, y, z, w }
 		{}

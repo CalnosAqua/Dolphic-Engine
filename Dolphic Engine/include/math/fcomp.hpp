@@ -30,6 +30,10 @@ namespace dlph {
 
 		//!	@brief	初期化子コンストラクタ
 		explicit FComplex(std::initializer_list<float> const&) noexcept;
+		//!	@brief	コンストラクタ
+		constexpr FComplex(Float2 const& arg) noexcept :
+			Float2(arg)
+		{}
 		//!	@brief	初期化子コンストラクタ
 		constexpr FComplex(float const& x, float const& y) noexcept :
 			Float2{ x, y }

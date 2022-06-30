@@ -32,6 +32,10 @@ namespace dlph {
 		//! @brief 初期化子コンストラクタ
 		explicit FMatrix4x4(std::initializer_list<float> const&) noexcept;
 		//! @brief コンストラクタ
+		constexpr FMatrix4x4(Float4x4 const& arg) noexcept :
+			Float4x4(arg)
+		{}
+		//! @brief コンストラクタ
 		constexpr FMatrix4x4(
 			float const& m00, float const& m01, float const& m02, float const& m03,
 			float const& m10, float const& m11, float const& m12, float const& m13,

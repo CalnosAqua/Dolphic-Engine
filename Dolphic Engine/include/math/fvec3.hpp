@@ -30,7 +30,11 @@ namespace dlph {
 
 		//!	@brief	初期化子コンストラクタ
 		explicit FVector3(std::initializer_list<float> const&) noexcept;
-		//!	@brief	初期化子コンストラクタ
+		//!	@brief	コンストラクタ
+		constexpr FVector3(Float3 const& arg) noexcept :
+			Float3(arg)
+		{}
+		//!	@brief	コンストラクタ
 		constexpr FVector3(float const& x, float const& y, float const& z) noexcept :
 			Float3{ x, y, z }
 		{}
