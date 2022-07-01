@@ -411,6 +411,7 @@
     <ClInclude Include="include\dlph\renderer.hpp" />
     <ClInclude Include="include\dlph\vsync.hpp" />
     <ClInclude Include="include\gmtry\fpln3.hpp" />
+    <ClInclude Include="include\math\feqpln3.hpp" />
     <ClInclude Include="include\gmtry\fray.hpp" />
     <ClInclude Include="include\ifs\noncopyable.hpp" />
     <ClInclude Include="include\ifs\nonmovable.hpp" />
@@ -436,6 +437,9 @@
     <ClInclude Include="include\structs\flt4.hpp" />
     <ClInclude Include="include\structs\flt4x4.hpp" />
     <ClInclude Include="include\structs\flts.hpp" />
+    <ClInclude Include="include\structs\uint2.hpp" />
+    <ClInclude Include="include\structs\uint3.hpp" />
+    <ClInclude Include="include\structs\uint4.hpp" />
     <ClInclude Include="include\times\clock.hpp" />
     <ClInclude Include="include\times\timer.hpp" />
     <ClInclude Include="include\util\utility.hpp" />
@@ -465,7 +469,6 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="include\gmtry\fpln3.cpp" />
     <ClCompile Include="src\d3d12\D3D12Buffer.cpp" />
     <ClCompile Include="src\d3d12\D3D12CommandList.cpp" />
     <ClCompile Include="src\d3d12\D3D12CommandQueue.cpp" />
@@ -480,6 +483,8 @@
     <ClCompile Include="src\dlph\device.cpp" />
     <ClCompile Include="src\dlph\renderer.cpp" />
     <ClCompile Include="src\dlph\vsync.cpp" />
+    <ClCompile Include="src\gmtry\fpln3.cpp" />
+    <ClCompile Include="src\math\feqpln3.cpp" />
     <ClCompile Include="src\math\fcomp.cpp" />
     <ClCompile Include="src\math\ferot.cpp" />
     <ClCompile Include="src\math\fmtx2x2.cpp" />

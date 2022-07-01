@@ -201,11 +201,23 @@
     <ClInclude Include="include\structs\flt2x2.hpp">
       <Filter>Project\Structure</Filter>
     </ClInclude>
+    <ClInclude Include="include\gmtry\fpln3.hpp">
+      <Filter>Project\Geometry</Filter>
+    </ClInclude>
     <ClInclude Include="include\gmtry\fray.hpp">
       <Filter>Project\Geometry</Filter>
     </ClInclude>
-    <ClInclude Include="include\gmtry\fpln3.hpp">
-      <Filter>Project\Geometry</Filter>
+    <ClInclude Include="include\structs\uint2.hpp">
+      <Filter>Project\Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include\structs\uint3.hpp">
+      <Filter>Project\Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include\structs\uint4.hpp">
+      <Filter>Project\Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include\math\feqpln3.hpp">
+      <Filter>Project\Mathematic</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -311,8 +323,11 @@
     <ClCompile Include="src\structs\flts.cpp">
       <Filter>Project\Structure</Filter>
     </ClCompile>
-    <ClCompile Include="include\gmtry\fpln3.cpp">
+    <ClCompile Include="src\gmtry\fpln3.cpp">
       <Filter>Project\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\feqpln3.cpp">
+      <Filter>Project\Mathematic</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

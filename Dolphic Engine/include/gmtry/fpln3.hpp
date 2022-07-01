@@ -2,15 +2,13 @@
  *	@brief	平面クラス
  */
 #pragma once
-#include "math/mathutil.hpp"
-#include "math/fmtx3x3.hpp"
-#include "math/fvec3.hpp"
+#include "structs/flt2.hpp"
+#include "structs/flt3.hpp"
+#include "structs/flt4.hpp"
+
+#include "structs/uint2.hpp"
 
 namespace dlph {
-	enum class HandSide;
-	class FMatrix3x3;
-	class FVector3;
-
 	/**	@class	FPlane3
 	 *	@brief	平面クラス
 	 */
@@ -30,32 +28,28 @@ namespace dlph {
 		//!	@brief	デストラクタ
 		~FPlane3() noexcept = default;
 
-		/**	@brief	初期化関数
-		 *	@param[in] 座標値
-		 */
-		FPlane3& init(FVector3 const& p1, FVector3 const& p2, FVector3 const& p3) noexcept;
+		//!	@brief	初期化関数
+		FPlane3& init(
+			FVector3 const& center,
+			FQuaternion const& posture,
+			Float2 const& size,
+			UInt2 const& partial_count
+		) noexcept;
 		//!	@brief	終了関数
 		void exit() noexcept;
 
-		//!	@brief	法線ベクトル取得関数
-		FVector3 const normal() const noexcept;
-		//!	@brief	従法線ベクトル取得関数
-		FVector3 const binormal() const noexcept;
-		//!	@brief	接ベクトル取得関数
-		FVector3 const tangent() const noexcept;
-
-		//!	@brief	接ベクトル空間変換行列取得関数
-		FMatrix3x3 const matrix(HandSide const& hs) const noexcept;
-
 	private	:
-		//!	@brief	法線ベクトル
-		Float3 m_normal;
-		//!	@brief	従法線ベクトル
-		Float3 m_binormal;
-		//!	@brief	接ベクトル
-		Float3 m_tangent;
-
-		//!	@brief	D値
-		float m_d;
+		//!	@brief	中心点
+		Float3 m_center;
+		//!	@brief	姿勢
+		Float4 m_posture;
+		//!	@brief	横幅
+		float m_width;
+		//!	@brief	縦幅
+		float m_height;
+		//!	@brief	横分割数
+		size_t m_horizontal;
+		//!	@brief	縦分割数
+		size_t m_vertical;
 	};
 }
