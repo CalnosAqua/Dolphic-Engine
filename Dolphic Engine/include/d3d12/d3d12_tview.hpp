@@ -1,4 +1,4 @@
-/**	@file	D3D12ViewType.hpp
+/**	@file	d3d12_tview.hpp
  *	@brief	ビュータイプ列挙体
  */
 #pragma once

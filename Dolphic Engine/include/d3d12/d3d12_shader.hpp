@@ -1,4 +1,4 @@
-﻿/**	@file	D3D12Shader.hpp
+﻿/**	@file	d3d12_shader.hpp
  *	@brief	Direct3D12 用のシェーダクラス
  */
 #pragma once

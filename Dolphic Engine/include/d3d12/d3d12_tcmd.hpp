@@ -1,4 +1,4 @@
-/**	@file	D3D12CommandType.hpp
+/**	@file	d3d12_tcmd.hpp
  *	@brief	コマンドの種類
  */
 #pragma once

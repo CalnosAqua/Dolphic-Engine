@@ -1,8 +1,7 @@
-/**	@file	D3D12ResourceBarrier.cpp
+/**	@file	d3d12_rsrc_barrier.cpp
  *	@brief	Direct3D12 用のリソースバリアクラス定義ファイル
  */
-
-#include "d3d12/D3D12ResourceBarrier.hpp"
+#include "d3d12/d3d12_rsrc_barrier.hpp"
 
 namespace dlph {
 	D3D12ResourceBarrier::D3D12ResourceBarrier() noexcept :

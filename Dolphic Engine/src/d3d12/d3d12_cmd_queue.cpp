@@ -1,9 +1,8 @@
-﻿/**	@file	D3D12CommandQueue.cpp
+﻿/**	@file	d3d12_cmd_queue.cpp
  *	@brief	Direct3D12 用のコマンドキュークラス
  */
-
-#include "d3d12/D3D12CommandQueue.hpp"
-#include "d3d12/D3D12Device.hpp"
+#include "d3d12/d3d12_cmd_queue.hpp"
+#include "d3d12/d3d12_device.hpp"
 #include "util/utility.hpp"
 
 namespace dlph {

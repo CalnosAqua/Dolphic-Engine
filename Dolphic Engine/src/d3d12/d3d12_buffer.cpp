@@ -1,10 +1,10 @@
-﻿/**	@file	D3D12Buffer.cpp
+﻿/**	@file	d3d12_buffer.cpp
  *	@brief	Direct3D12 用のバッファクラス
  */
-
-#include "d3d12/D3D12Buffer.hpp"
-#include "d3d12/D3D12Device.hpp"
+#include "d3d12/d3d12_buffer.hpp"
+#include "d3d12/d3d12_device.hpp"
 #include "util/utility.hpp"
+#include <DirectXTex.h>
 #include <string>
 
 namespace dlph {
@@ -165,6 +165,8 @@ namespace dlph {
 		return m_rsrces[idx];
 	}
 
+	/* View 生成関数 */
+
 	bool const createDepthStencilView(D3D12Buffer& buffer, HWND const& hWnd) noexcept {
 		HRESULT hResult = S_OK;
 
@@ -228,6 +230,36 @@ namespace dlph {
 		return true;
 	}
 
+	bool const createRenderTargetView(D3D12Buffer& buffer, D3D12SwapChain const& swapchain, unsigned int const& size) noexcept {
+		HRESULT hResult = S_OK;
+
+		buffer.init(D3D12ViewType::RTV, size);
+
+		D3D12_RENDER_TARGET_VIEW_DESC viewDesc;
+		D3D12DescriptorHandle handle;
+
+		for (auto i = 0u; i < size; ++i)
+		{
+			hResult = swapchain->GetBuffer(i, __uuidof(buffer[i]), reinterpret_cast<void**>(&buffer[i]));
+			if (FAILED(hResult))
+			{
+				return false;
+			}
+
+			viewDesc = {};
+			viewDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM_SRGB;
+			viewDesc.ViewDimension = D3D12_RTV_DIMENSION_TEXTURE2D;
+			viewDesc.Texture2D.MipSlice = 0;
+			viewDesc.Texture2D.PlaneSlice = 0;
+
+			handle = buffer.getDescriptorHandle(i);
+
+			// レンダーターゲットビューの生成.
+			D3D12Device::getInstance()->CreateRenderTargetView(buffer[i], &viewDesc, handle.cpu);
+		}
+		return true;
+	}
+
 	bool const createIndexBufferView(D3D12Buffer& buffer, unsigned int* indecies, unsigned int const& size) noexcept {
 		HRESULT hResult = S_OK;
 
@@ -287,9 +319,66 @@ namespace dlph {
 		return true;
 	}
 
-	/*/
-	bool const createShaderResourceView(D3D12Buffer& buffer, wchar_t const* const& filename) noexcept {
-		return false;
+	bool const createShaderResourceView(D3D12Buffer& buffer, std::wstring const& path, TextureSizeType const& type, RasterPictureFileType rtype) noexcept {
+		HRESULT hResult = S_OK;
+
+		buffer.init(D3D12ViewType::SRV, 1U);
+
+		DirectX::ScratchImage img;
+
+		switch (rtype) {
+		case RasterPictureFileType::PNG:
+		case RasterPictureFileType::JPG:
+			hResult = DirectX::LoadFromWICFile(path.c_str(), DirectX::WIC_FLAGS_NONE, nullptr, img);
+			if (FAILED(hResult)) {
+				OutputDebugStringA("ERROR : FAILED LOAD TEXTURE FILE FROM FILE PATH.\n");
+				return false;
+			}
+			break;
+		case RasterPictureFileType::TGA:
+			hResult = DirectX::LoadFromTGAFile(path.c_str(), nullptr, img);
+			if (FAILED(hResult)) {
+				OutputDebugStringA("ERROR : FAILED LOAD TEXTURE FILE FROM FILE PATH.\n");
+				return false;
+			}
+			break;
+		case RasterPictureFileType::DDS:
+			hResult = DirectX::LoadFromDDSFile(path.c_str(), DirectX::DDS_FLAGS_NONE, nullptr, img);
+			if (FAILED(hResult)) {
+				OutputDebugStringA("ERROR : FAILED LOAD TEXTURE FILE FROM FILE PATH.\n");
+				return false;
+			}
+			break;
+		default :
+			OutputDebugStringA("ERROR : FAILED LOAD TEXTURE FILE FROM FILE TYPE.\n");
+			return false;
+		}
+
+		DirectX::TexMetadata metadata = img.GetMetadata();
+
+		std::vector<D3D12_SUBRESOURCE_DATA> subresources;
+
+		hResult = DirectX::CreateTexture(D3D12Device::getInstance().get(), metadata, reinterpret_cast<ID3D12Resource**>(&buffer[0]));
+		if (FAILED(hResult)) {
+			OutputDebugStringA("ERROR : FAILED CREATE TEXTURE.\n");
+			return false;
+		}
+
+		hResult = DirectX::PrepareUpload(
+			D3D12Device::getInstance().get(),
+			img.GetImages(),
+			img.GetImageCount(),
+			metadata,
+			subresources
+		);
+		if (FAILED(hResult)) {
+			OutputDebugStringA("ERROR : FAILED UPLOAD TEXTURE.\n");
+			return false;
+		}
+
+		const auto totalBytes = DirectX::GetRequiredIntermediateSize(
+			m_texture.Get(), 0, subresources.size());
+
+		return true;
 	}
-	/*/
 }

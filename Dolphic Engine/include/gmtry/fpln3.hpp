@@ -8,6 +8,9 @@
 
 #include "structs/uint2.hpp"
 
+#include "math/fvec3.hpp"
+#include "math/fquat.hpp"
+
 namespace dlph {
 	/**	@class	FPlane3
 	 *	@brief	平面クラス

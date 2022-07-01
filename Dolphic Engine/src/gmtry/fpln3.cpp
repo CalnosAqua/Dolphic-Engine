@@ -2,8 +2,6 @@
  *	@brief	平面クラス
  */
 #include "gmtry/fpln3.hpp"
-#include "math/fvec3.hpp"
-#include "math/fquat.hpp"
 #include "math/math.hpp"
 #include <numeric>
 
@@ -48,6 +46,8 @@ namespace dlph {
 		if (m_vertical == 0U) {
 			m_vertical = 1U;
 		}
+
+		return *this;
 	}
 
 	void FPlane3::exit() noexcept {

@@ -1,14 +1,14 @@
-﻿/**	@file	D3D12Renderer.hpp
+﻿/**	@file	d3d12_rend.hpp
  *	@brief	Direct3D12 を利用したレンダラ
  */
 #pragma once
 #include "ifs/noncopyable.hpp"
 #include "structs/flt4.hpp"
-#include "D3D12ResourceBarrier.hpp"
-#include "D3D12Buffer.hpp"
-#include "D3D12CommandQueue.hpp"
-#include "D3D12CommandList.hpp"
-#include "D3D12Fence.hpp"
+#include "d3d12_rsrc_barrier.hpp"
+#include "d3d12_buffer.hpp"
+#include "d3d12_cmd_queue.hpp"
+#include "d3d12_cmd_list.hpp"
+#include "d3d12_fence.hpp"
 
 namespace dlph {
 	/**	@struct	RendererDesc

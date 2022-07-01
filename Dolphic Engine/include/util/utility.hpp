@@ -11,6 +11,12 @@ namespace dlph {
 	template<typename T>
 	void safe_release(T*& ptr) noexcept;
 
+	/**	@brief COM オブジェクト解放関数
+	 *	@param[in] ptr Vulkan オブジェクト
+	 */
+	template<typename T>
+	void safe_destroy(T*& ptr) noexcept;
+
 	/**	@brief オブジェクト解放関数
 	 *	@param[in] ptr オブジェクト
 	 */

@@ -1,4 +1,4 @@
-﻿/**	@file	D3D12Device.hpp
+﻿/**	@file	d3d12_device.hpp
  *	@brief	Direct3D12 用のデバイスクラス
  */
 #pragma	once

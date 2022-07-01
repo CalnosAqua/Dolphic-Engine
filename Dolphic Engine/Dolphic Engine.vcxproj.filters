@@ -63,54 +63,6 @@
     <ClInclude Include="..\DirectXTex\include\WICTextureLoader12.h">
       <Filter>Framework\DirectXTex</Filter>
     </ClInclude>
-    <ClInclude Include="include\d3d12\D3D12Buffer.hpp">
-      <Filter>Project\Direct3D12</Filter>
-    </ClInclude>
-    <ClInclude Include="include\d3d12\D3D12CommandList.hpp">
-      <Filter>Project\Direct3D12</Filter>
-    </ClInclude>
-    <ClInclude Include="include\d3d12\D3D12CommandQueue.hpp">
-      <Filter>Project\Direct3D12</Filter>
-    </ClInclude>
-    <ClInclude Include="include\d3d12\D3D12CommandType.hpp">
-      <Filter>Project\Direct3D12</Filter>
-    </ClInclude>
-    <ClInclude Include="include\d3d12\D3D12Device.hpp">
-      <Filter>Project\Direct3D12</Filter>
-    </ClInclude>
-    <ClInclude Include="include\d3d12\D3D12Fence.hpp">
-      <Filter>Project\Direct3D12</Filter>
-    </ClInclude>
-    <ClInclude Include="include\d3d12\D3D12Renderer.hpp">
-      <Filter>Project\Direct3D12</Filter>
-    </ClInclude>
-    <ClInclude Include="include\d3d12\D3D12ResourceBarrier.hpp">
-      <Filter>Project\Direct3D12</Filter>
-    </ClInclude>
-    <ClInclude Include="include\d3d12\D3D12Shader.hpp">
-      <Filter>Project\Direct3D12</Filter>
-    </ClInclude>
-    <ClInclude Include="include\d3d12\D3D12SwapChain.hpp">
-      <Filter>Project\Direct3D12</Filter>
-    </ClInclude>
-    <ClInclude Include="include\d3d12\D3D12ViewType.hpp">
-      <Filter>Project\Direct3D12</Filter>
-    </ClInclude>
-    <ClInclude Include="include\dlph\cmd_list.hpp">
-      <Filter>Project\DolphicRenderer</Filter>
-    </ClInclude>
-    <ClInclude Include="include\dlph\cmd_queue.hpp">
-      <Filter>Project\DolphicRenderer</Filter>
-    </ClInclude>
-    <ClInclude Include="include\dlph\device.hpp">
-      <Filter>Project\DolphicRenderer</Filter>
-    </ClInclude>
-    <ClInclude Include="include\dlph\renderer.hpp">
-      <Filter>Project\DolphicRenderer</Filter>
-    </ClInclude>
-    <ClInclude Include="include\dlph\vsync.hpp">
-      <Filter>Project\DolphicRenderer</Filter>
-    </ClInclude>
     <ClInclude Include="include\ifs\noncopyable.hpp">
       <Filter>Project\Interface</Filter>
     </ClInclude>
@@ -177,12 +129,6 @@
     <ClInclude Include="include\util\utility.hpp">
       <Filter>Project\Utility</Filter>
     </ClInclude>
-    <ClInclude Include="include\vk\VKDevice.hpp">
-      <Filter>Project\Vulkan</Filter>
-    </ClInclude>
-    <ClInclude Include="include\vk\VKRenderer.hpp">
-      <Filter>Project\Vulkan</Filter>
-    </ClInclude>
     <ClInclude Include="include\win\WinWindow.hpp">
       <Filter>Project\Window</Filter>
     </ClInclude>
@@ -219,6 +165,57 @@
     <ClInclude Include="include\math\feqpln3.hpp">
       <Filter>Project\Mathematic</Filter>
     </ClInclude>
+    <ClInclude Include="include\vk\vk_instance.hpp">
+      <Filter>Project\Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\d3d12_buffer.hpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\d3d12_cmd_list.hpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\d3d12_cmd_queue.hpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\d3d12_device.hpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\d3d12_fence.hpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\d3d12_rend.hpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\d3d12_rsrc_barrier.hpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\d3d12_shader.hpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\d3d12_swapchain.hpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\d3d12_tcmd.hpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="include\d3d12\d3d12_tview.hpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClInclude>
+    <ClInclude Include="dlph_rend.hpp">
+      <Filter>Project\DolphicRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="dlph_mesh.hpp">
+      <Filter>Project\DolphicRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="dlph_material.hpp">
+      <Filter>Project\DolphicRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dlph\dlph_ttexsize.hpp">
+      <Filter>Project\DolphicRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dlph\dlph_tfile.hpp">
+      <Filter>Project\DolphicRenderer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -229,48 +226,6 @@
     </ClCompile>
     <ClCompile Include="..\DirectXTex\include\WICTextureLoader12.cpp">
       <Filter>Framework\DirectXTex</Filter>
-    </ClCompile>
-    <ClCompile Include="src\d3d12\D3D12Buffer.cpp">
-      <Filter>Project\Direct3D12</Filter>
-    </ClCompile>
-    <ClCompile Include="src\d3d12\D3D12CommandList.cpp">
-      <Filter>Project\Direct3D12</Filter>
-    </ClCompile>
-    <ClCompile Include="src\d3d12\D3D12CommandQueue.cpp">
-      <Filter>Project\Direct3D12</Filter>
-    </ClCompile>
-    <ClCompile Include="src\d3d12\D3D12Device.cpp">
-      <Filter>Project\Direct3D12</Filter>
-    </ClCompile>
-    <ClCompile Include="src\d3d12\D3D12Fence.cpp">
-      <Filter>Project\Direct3D12</Filter>
-    </ClCompile>
-    <ClCompile Include="src\d3d12\D3D12Renderer.cpp">
-      <Filter>Project\Direct3D12</Filter>
-    </ClCompile>
-    <ClCompile Include="src\d3d12\D3D12ResourceBarrier.cpp">
-      <Filter>Project\Direct3D12</Filter>
-    </ClCompile>
-    <ClCompile Include="src\d3d12\D3D12Shader.cpp">
-      <Filter>Project\Direct3D12</Filter>
-    </ClCompile>
-    <ClCompile Include="src\d3d12\D3D12SwapChain.cpp">
-      <Filter>Project\Direct3D12</Filter>
-    </ClCompile>
-    <ClCompile Include="src\dlph\cmd_list.cpp">
-      <Filter>Project\DolphicRenderer</Filter>
-    </ClCompile>
-    <ClCompile Include="src\dlph\cmd_queue.cpp">
-      <Filter>Project\DolphicRenderer</Filter>
-    </ClCompile>
-    <ClCompile Include="src\dlph\device.cpp">
-      <Filter>Project\DolphicRenderer</Filter>
-    </ClCompile>
-    <ClCompile Include="src\dlph\renderer.cpp">
-      <Filter>Project\DolphicRenderer</Filter>
-    </ClCompile>
-    <ClCompile Include="src\dlph\vsync.cpp">
-      <Filter>Project\DolphicRenderer</Filter>
     </ClCompile>
     <ClCompile Include="src\math\fcomp.cpp">
       <Filter>Project\Mathematic</Filter>
@@ -329,13 +284,40 @@
     <ClCompile Include="src\math\feqpln3.cpp">
       <Filter>Project\Mathematic</Filter>
     </ClCompile>
+    <ClCompile Include="src\d3d12\d3d12_buffer.cpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClCompile>
+    <ClCompile Include="src\d3d12\d3d12_cmd_list.cpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClCompile>
+    <ClCompile Include="src\d3d12\d3d12_cmd_queue.cpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClCompile>
+    <ClCompile Include="src\d3d12\d3d12_device.cpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClCompile>
+    <ClCompile Include="src\d3d12\d3d12_fence.cpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClCompile>
+    <ClCompile Include="src\d3d12\d3d12_rend.cpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClCompile>
+    <ClCompile Include="src\d3d12\d3d12_rsrc_barrier.cpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClCompile>
+    <ClCompile Include="src\d3d12\d3d12_shader.cpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClCompile>
+    <ClCompile Include="src\d3d12\d3d12_swapchain.cpp">
+      <Filter>Project\Direct3D12</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dlph\dlph_ttexsize.cpp">
+      <Filter>Project\DolphicRenderer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\DirectXTex\include\DirectXTex.inl">
       <Filter>Framework\DirectXTex</Filter>
-    </None>
-    <None Include="include\d3d12\D3D12Buffer.inl">
-      <Filter>Project\Direct3D12</Filter>
     </None>
     <None Include="include\math\mathutil.inl">
       <Filter>Project\Mathematic</Filter>
@@ -345,6 +327,9 @@
     </None>
     <None Include="include\gmtry\fray.inl">
       <Filter>Project\Geometry</Filter>
+    </None>
+    <None Include="include\d3d12\d3d12_buffer.inl">
+      <Filter>Project\Direct3D12</Filter>
     </None>
   </ItemGroup>
 </Project>

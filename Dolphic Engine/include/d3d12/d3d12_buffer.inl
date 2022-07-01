@@ -1,9 +1,8 @@
-﻿/**	@file	D3D12Buffer.inl
+﻿/**	@file	d3d12_buffer.inl
  *	@brief	Direct3D12 用のバッファクラス
  */
 #pragma once
-
-#include "D3D12Device.hpp"
+#include "d3d12_device.hpp"
 
 namespace dlph {
 	template<typename Vertex>

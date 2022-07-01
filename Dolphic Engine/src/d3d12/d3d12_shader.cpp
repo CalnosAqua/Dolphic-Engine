@@ -1,9 +1,8 @@
-﻿/**	@file	D3D12Shader.cpp
+﻿/**	@file	d3d12_shader.cpp
  *	@brief	シェーダ
  */
-
-#include "d3d12/D3D12Shader.hpp"
-#include "d3d12/D3D12Device.hpp"
+#include "d3d12/d3d12_shader.hpp"
+#include "d3d12/d3d12_device.hpp"
 #include "util/utility.hpp"
 #include <d3dcompiler.h>
 

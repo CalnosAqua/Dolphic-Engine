@@ -393,23 +393,23 @@
     <ClInclude Include="..\DirectXTex\include\DDSTextureLoader12.h" />
     <ClInclude Include="..\DirectXTex\include\DirectXTex.h" />
     <ClInclude Include="..\DirectXTex\include\WICTextureLoader12.h" />
-    <ClInclude Include="include\d3d12\D3D12Buffer.hpp" />
-    <ClInclude Include="include\d3d12\D3D12CommandList.hpp" />
-    <ClInclude Include="include\d3d12\D3D12CommandQueue.hpp" />
-    <ClInclude Include="include\d3d12\D3D12CommandType.hpp" />
-    <ClInclude Include="include\d3d12\D3D12Device.hpp" />
-    <ClInclude Include="include\d3d12\D3D12Fence.hpp" />
-    <ClInclude Include="include\d3d12\D3D12Renderer.hpp" />
-    <ClInclude Include="include\d3d12\D3D12ResourceBarrier.hpp" />
-    <ClInclude Include="include\d3d12\D3D12Shader.hpp" />
-    <ClInclude Include="include\d3d12\D3D12SwapChain.hpp" />
-    <ClInclude Include="include\d3d12\D3D12ViewType.hpp" />
+    <ClInclude Include="dlph_material.hpp" />
+    <ClInclude Include="dlph_mesh.hpp" />
+    <ClInclude Include="dlph_rend.hpp" />
+    <ClInclude Include="include\d3d12\d3d12_buffer.hpp" />
+    <ClInclude Include="include\d3d12\d3d12_cmd_list.hpp" />
+    <ClInclude Include="include\d3d12\d3d12_cmd_queue.hpp" />
+    <ClInclude Include="include\d3d12\d3d12_device.hpp" />
+    <ClInclude Include="include\d3d12\d3d12_fence.hpp" />
+    <ClInclude Include="include\d3d12\d3d12_rend.hpp" />
+    <ClInclude Include="include\d3d12\d3d12_rsrc_barrier.hpp" />
+    <ClInclude Include="include\d3d12\d3d12_shader.hpp" />
+    <ClInclude Include="include\d3d12\d3d12_swapchain.hpp" />
+    <ClInclude Include="include\d3d12\d3d12_tcmd.hpp" />
+    <ClInclude Include="include\d3d12\d3d12_tview.hpp" />
     <ClInclude Include="include\dlph.hpp" />
-    <ClInclude Include="include\dlph\cmd_list.hpp" />
-    <ClInclude Include="include\dlph\cmd_queue.hpp" />
-    <ClInclude Include="include\dlph\device.hpp" />
-    <ClInclude Include="include\dlph\renderer.hpp" />
-    <ClInclude Include="include\dlph\vsync.hpp" />
+    <ClInclude Include="include\dlph\dlph_tfile.hpp" />
+    <ClInclude Include="include\dlph\dlph_ttexsize.hpp" />
     <ClInclude Include="include\gmtry\fpln3.hpp" />
     <ClInclude Include="include\math\feqpln3.hpp" />
     <ClInclude Include="include\gmtry\fray.hpp" />
@@ -443,8 +443,7 @@
     <ClInclude Include="include\times\clock.hpp" />
     <ClInclude Include="include\times\timer.hpp" />
     <ClInclude Include="include\util\utility.hpp" />
-    <ClInclude Include="include\vk\VKDevice.hpp" />
-    <ClInclude Include="include\vk\VKRenderer.hpp" />
+    <ClInclude Include="include\vk\vk_instance.hpp" />
     <ClInclude Include="include\win\WinWindow.hpp" />
     <ClInclude Include="stdafx.hpp" />
   </ItemGroup>
@@ -469,20 +468,16 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="src\d3d12\D3D12Buffer.cpp" />
-    <ClCompile Include="src\d3d12\D3D12CommandList.cpp" />
-    <ClCompile Include="src\d3d12\D3D12CommandQueue.cpp" />
-    <ClCompile Include="src\d3d12\D3D12Device.cpp" />
-    <ClCompile Include="src\d3d12\D3D12Fence.cpp" />
-    <ClCompile Include="src\d3d12\D3D12Renderer.cpp" />
-    <ClCompile Include="src\d3d12\D3D12ResourceBarrier.cpp" />
-    <ClCompile Include="src\d3d12\D3D12Shader.cpp" />
-    <ClCompile Include="src\d3d12\D3D12SwapChain.cpp" />
-    <ClCompile Include="src\dlph\cmd_list.cpp" />
-    <ClCompile Include="src\dlph\cmd_queue.cpp" />
-    <ClCompile Include="src\dlph\device.cpp" />
-    <ClCompile Include="src\dlph\renderer.cpp" />
-    <ClCompile Include="src\dlph\vsync.cpp" />
+    <ClCompile Include="src\d3d12\d3d12_buffer.cpp" />
+    <ClCompile Include="src\d3d12\d3d12_cmd_list.cpp" />
+    <ClCompile Include="src\d3d12\d3d12_cmd_queue.cpp" />
+    <ClCompile Include="src\d3d12\d3d12_device.cpp" />
+    <ClCompile Include="src\d3d12\d3d12_fence.cpp" />
+    <ClCompile Include="src\d3d12\d3d12_rend.cpp" />
+    <ClCompile Include="src\d3d12\d3d12_rsrc_barrier.cpp" />
+    <ClCompile Include="src\d3d12\d3d12_shader.cpp" />
+    <ClCompile Include="src\d3d12\d3d12_swapchain.cpp" />
+    <ClCompile Include="src\dlph\dlph_ttexsize.cpp" />
     <ClCompile Include="src\gmtry\fpln3.cpp" />
     <ClCompile Include="src\math\feqpln3.cpp" />
     <ClCompile Include="src\math\fcomp.cpp" />
@@ -515,7 +510,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\DirectXTex\include\DirectXTex.inl" />
-    <None Include="include\d3d12\D3D12Buffer.inl" />
+    <None Include="include\d3d12\d3d12_buffer.inl" />
     <None Include="include\gmtry\fray.inl" />
     <None Include="include\math\mathutil.inl" />
     <None Include="include\util\utility.inl" />

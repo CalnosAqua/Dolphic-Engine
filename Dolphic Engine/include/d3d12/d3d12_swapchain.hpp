@@ -1,4 +1,4 @@
-﻿/**	@file	D3D12SwapChain.hpp
+﻿/**	@file	d3d12_swapchain.hpp
  *	@brief	スワップチェイン
  */
 #pragma once

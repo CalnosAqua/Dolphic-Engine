@@ -1,8 +1,7 @@
-﻿/**	@file	D3D12Device.cpp
+﻿/**	@file	d3d12_device.cpp
  *	@brief	Direct3D12 用のデバイスクラス
  */
-
-#include "d3d12/D3D12Device.hpp"
+#include "d3d12/d3d12_device.hpp"
 #include "util/utility.hpp"
 
 namespace dlph {

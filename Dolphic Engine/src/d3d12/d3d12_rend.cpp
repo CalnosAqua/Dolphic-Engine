@@ -1,9 +1,8 @@
-﻿/**	@file	D3D12Renderer.cpp
+﻿/**	@file	d3d12_rend.cpp
  *	@brief	Direct3D12 を利用したレンダラ
  */
-
-#include "d3d12/D3D12Renderer.hpp"
-#include "d3d12/D3D12Device.hpp"
+#include "d3d12/d3d12_rend.hpp"
+#include "d3d12/d3d12_device.hpp"
 #include "util/utility.hpp"
 
 namespace dlph {

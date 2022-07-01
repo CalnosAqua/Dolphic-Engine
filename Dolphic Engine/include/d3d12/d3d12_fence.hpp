@@ -1,9 +1,9 @@
-﻿/**	@file	D3D12Fence.hpp
+﻿/**	@file	d3d12_fence.hpp
  *	@brief	フェンス
  */
 #pragma once
 #include "ifs/noncopyable.hpp"
-#include "D3D12CommandQueue.hpp"
+#include "d3d12_cmd_queue.hpp"
 #include <d3d12.h>
 
 namespace dlph {

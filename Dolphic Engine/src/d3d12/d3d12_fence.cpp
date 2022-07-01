@@ -1,9 +1,8 @@
-﻿/**	@file	D3D12Fence.cpp
+﻿/**	@file	d3d12_fence.cpp
  *	@brief	フェンス
  */
-
-#include "d3d12/D3D12Fence.hpp"
-#include "d3d12/D3D12Device.hpp"
+#include "d3d12/d3d12_fence.hpp"
+#include "d3d12/d3d12_device.hpp"
 #include "util/utility.hpp"
 
 namespace dlph {
@@ -120,7 +119,7 @@ namespace dlph {
 			WaitForSingleObjectEx(m_event, INFINITE, FALSE);
 		}
 
-		m_signal++;
+		++m_signal;
 		return true;
 	}
 

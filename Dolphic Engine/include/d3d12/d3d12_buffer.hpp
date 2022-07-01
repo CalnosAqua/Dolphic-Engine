@@ -1,11 +1,13 @@
-﻿/**	@file	D3D12Buffer.hpp
+﻿/**	@file	d3d12_buffer.hpp
  *	@brief	Direct3D12 用のバッファテンプレートクラス
  */
 #pragma once
 #pragma warning(disable : 4251)
 #include "ifs/noncopyable.hpp"
-#include "D3D12ViewType.hpp"
-#include "D3D12SwapChain.hpp"
+#include "dlph/dlph_ttexsize.hpp"
+#include "dlph/dlph_tfile.hpp"
+#include "d3d12_tview.hpp"
+#include "d3d12_swapchain.hpp"
 #include <vector>
 #include <dxgi1_6.h>
 #include <d3d12.h>
@@ -110,6 +112,15 @@ namespace dlph {
 	 */
 	template <typename T>
 	bool const createConstantBufferView(D3D12Buffer& buffer, T const& data, unsigned int const& size) noexcept;
+
+	/**	@brief	定数バッファ生成関数
+	 *	@param[in] buffer 対象バッファ
+	 *	@param[in] vertex インデックスデータの先頭ポインタ
+	 *	@param[in] size 定数バッファ数
+	 *	@retval true 生成に成功しました。
+	 *	@retval false 生成に失敗しました。
+	 */
+	bool const createShaderResourceView(D3D12Buffer& buffer, std::wstring const& path, TextureSizeType const& type, RasterPictureFileType rtype) noexcept;
 }
 
-#include "D3D12Buffer.inl"
+#include "d3d12_buffer.inl"

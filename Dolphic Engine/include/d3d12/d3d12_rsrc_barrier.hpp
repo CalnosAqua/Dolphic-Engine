@@ -1,9 +1,9 @@
-﻿/**	@file	D3D12ResourceBarrier.hpp
+﻿/**	@file	d3d12_rsrc_barrier.hpp
  *	@brief	Direct3D12 用のリソースバリアクラス宣言ファイル
  */
 #pragma once
 #include "ifs/noncopyable.hpp"
-#include "D3D12CommandList.hpp"
+#include "d3d12_cmd_list.hpp"
 #include <d3d12.h>
 
 namespace dlph {

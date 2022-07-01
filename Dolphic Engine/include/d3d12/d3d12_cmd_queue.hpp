@@ -1,9 +1,9 @@
-﻿/**	@file	D3D12CommandQueue.hpp
+﻿/**	@file	d3d12_cmd_queue.hpp
  *	@brief	Direct3D12 用のコマンドキュー
  */
 #pragma once
 #include "ifs/noncopyable.hpp"
-#include "D3D12CommandType.hpp"
+#include "d3d12_tcmd.hpp"
 #include <d3d12.h>
 
 namespace dlph {
