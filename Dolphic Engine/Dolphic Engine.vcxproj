@@ -393,9 +393,6 @@
     <ClInclude Include="..\DirectXTex\include\DDSTextureLoader12.h" />
     <ClInclude Include="..\DirectXTex\include\DirectXTex.h" />
     <ClInclude Include="..\DirectXTex\include\WICTextureLoader12.h" />
-    <ClInclude Include="dlph_material.hpp" />
-    <ClInclude Include="dlph_mesh.hpp" />
-    <ClInclude Include="dlph_rend.hpp" />
     <ClInclude Include="include\cont\array.hpp" />
     <ClInclude Include="include\d3d12\d3d12_buffer.hpp" />
     <ClInclude Include="include\d3d12\d3d12_cmd_list.hpp" />
@@ -409,6 +406,9 @@
     <ClInclude Include="include\d3d12\d3d12_tcmd.hpp" />
     <ClInclude Include="include\d3d12\d3d12_tview.hpp" />
     <ClInclude Include="include\dlph.hpp" />
+    <ClInclude Include="include\dlph\dlph_material.hpp" />
+    <ClInclude Include="include\dlph\dlph_mesh.hpp" />
+    <ClInclude Include="include\dlph\dlph_rend.hpp" />
     <ClInclude Include="include\dlph\dlph_tfile.hpp" />
     <ClInclude Include="include\dlph\dlph_ttexsize.hpp" />
     <ClInclude Include="include\gmtry\fpln3.hpp" />

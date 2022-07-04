@@ -183,15 +183,6 @@
     <ClInclude Include="include\d3d12\d3d12_tview.hpp">
       <Filter>Project\Direct3D12</Filter>
     </ClInclude>
-    <ClInclude Include="dlph_rend.hpp">
-      <Filter>Project\DolphicRenderer</Filter>
-    </ClInclude>
-    <ClInclude Include="dlph_mesh.hpp">
-      <Filter>Project\DolphicRenderer</Filter>
-    </ClInclude>
-    <ClInclude Include="dlph_material.hpp">
-      <Filter>Project\DolphicRenderer</Filter>
-    </ClInclude>
     <ClInclude Include="include\dlph\dlph_ttexsize.hpp">
       <Filter>Project\DolphicRenderer</Filter>
     </ClInclude>
@@ -212,6 +203,15 @@
     </ClInclude>
     <ClInclude Include="include\structs\t4.hpp">
       <Filter>Project\Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dlph\dlph_material.hpp">
+      <Filter>Project\DolphicRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dlph\dlph_mesh.hpp">
+      <Filter>Project\DolphicRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dlph\dlph_rend.hpp">
+      <Filter>Project\DolphicRenderer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

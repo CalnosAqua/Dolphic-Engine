@@ -13,18 +13,22 @@
 
 #include <crtdbg.h>
 
+/*/
 //	WINDOWS 用メモリ管理ライブラリ
-//#pragma comment(lib, "winmm.lib")
+#pragma comment(lib, "winmm.lib")
 
 //	Vulkan API 読み込み
-//#pragma comment(lib, "vulkan-1.lib")
+#pragma comment(lib, "vulkan-1.lib")
+/*/
 
 #include <vulkan/vulkan.h>
 
+/*/
 //	Direct3D12 読み込み
-//#pragma comment(lib, "dxgi.lib")
-//#pragma comment(lib, "d3d12.lib")
-//#pragma comment(lib, "d3dcompiler.lib")
+#pragma comment(lib, "dxgi.lib")
+#pragma comment(lib, "d3d12.lib")
+#pragma comment(lib, "d3dcompiler.lib")
+/*/
 
 /*/
 #if defined(_M_ARM) || defined(_M_ARM64)
