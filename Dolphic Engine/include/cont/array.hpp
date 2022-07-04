@@ -22,7 +22,7 @@ namespace dlph {
 		Array<T, S>& operator=(Array<T, S> const& rhs) & noexcept = default;
 
 		//!	@brief	初期化子コンストラクタ
-		explicit Array(std::initializer_list<T> const& args) noexcept;
+		Array(std::initializer_list<T> const& args) noexcept;
 
 		//!	@brief	デフォルトコンストラクタ
 		Array() noexcept;
