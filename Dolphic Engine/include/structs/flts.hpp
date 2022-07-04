@@ -3,14 +3,15 @@
  */
 #pragma once
 
-namespace dlph {
-	struct Float2;
-	struct Float3;
-	struct Float4;
-	struct Float2x2;
-	struct Float3x3;
-	struct Float4x4;
+#include "structs/t2.hpp"
+#include "structs/t3.hpp"
+#include "structs/t4.hpp"
 
+#include "structs/flt2x2.hpp"
+#include "structs/flt3x3.hpp"
+#include "structs/flt4x4.hpp"
+
+namespace dlph {
 	/**	@brief	設定関数
 	 *	@param[in] 設定用の値
 	 *	@return	設定した値
@@ -121,40 +122,40 @@ namespace dlph {
 	 *	@param[in] idx	抽出インデックス
 	 *	@return	抽出した値
 	 */
-	Float2 constexpr sep_column(Float2x2 const& mtx, unsigned int const& idx) noexcept;
+	Float2 const sep_column(Float2x2 const& mtx, unsigned int const& idx) noexcept;
 
 	/**	@brief	列成分抽出関数
 	 *	@param[in] mtx	抽出元
 	 *	@param[in] idx	抽出インデックス
 	 *	@return	抽出した値
 	 */
-	Float3 constexpr sep_column(Float3x3 const& mtx, unsigned int const& idx) noexcept;
+	Float3 const sep_column(Float3x3 const& mtx, unsigned int const& idx) noexcept;
 
 	/**	@brief	列成分抽出関数
 	 *	@param[in] mtx	抽出元
 	 *	@param[in] idx	抽出インデックス
 	 *	@return	抽出した値
 	 */
-	Float4 constexpr sep_column(Float4x4 const& mtx, unsigned int const& idx) noexcept;
+	Float4 const sep_column(Float4x4 const& mtx, unsigned int const& idx) noexcept;
 
 	/**	@brief	行成分抽出関数
 	 *	@param[in] mtx	抽出元
 	 *	@param[in] idx	抽出インデックス
 	 *	@return	抽出した値
 	 */
-	Float2 constexpr sep_row(Float2x2 const& mtx, unsigned int const& idx) noexcept;
+	Float2 const sep_row(Float2x2 const& mtx, unsigned int const& idx) noexcept;
 
 	/**	@brief	行成分抽出関数
 	 *	@param[in] mtx	抽出元
 	 *	@param[in] idx	抽出インデックス
 	 *	@return	抽出した値
 	 */
-	Float3 constexpr sep_row(Float3x3 const& mtx, unsigned int const& idx) noexcept;
+	Float3 const sep_row(Float3x3 const& mtx, unsigned int const& idx) noexcept;
 
 	/**	@brief	行成分抽出関数
 	 *	@param[in] mtx	抽出元
 	 *	@param[in] idx	抽出インデックス
 	 *	@return	抽出した値
 	 */
-	Float4 constexpr sep_row(Float4x4 const& mtx, unsigned int const& idx) noexcept;
+	Float4 const sep_row(Float4x4 const& mtx, unsigned int const& idx) noexcept;
 }

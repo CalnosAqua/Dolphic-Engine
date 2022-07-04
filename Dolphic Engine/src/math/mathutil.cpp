@@ -55,13 +55,13 @@ namespace dlph {
 	FMatrix4x4 const toMtx(FEulerRotation const& arg) noexcept {
 		FMatrix4x4 pitch, yaw, roll;
 
-		pitch.m11	= pitch.m22	= cos(arg.pitch);
-		yaw.m00		= yaw.m22	= cos(arg.yaw);
-		roll.m00	= roll.m11	= cos(arg.roll);
+		pitch.m11	= pitch.m22	= cos(arg.x);
+		yaw.m00		= yaw.m22	= cos(arg.y);
+		roll.m00	= roll.m11	= cos(arg.z);
 
-		pitch.m12	= pitch.m12	= sin(arg.pitch);
-		yaw.m02		= yaw.m20	= sin(arg.yaw);
-		roll.m01	= roll.m10	= sin(arg.roll);
+		pitch.m12	= pitch.m12	= sin(arg.x);
+		yaw.m02		= yaw.m20	= sin(arg.y);
+		roll.m01	= roll.m10	= sin(arg.z);
 
 		pitch.m12	*= -1.0f;
 		yaw.m20		*= -1.0f;
@@ -156,12 +156,12 @@ namespace dlph {
 	FQuaternion const toQt(FEulerRotation const& arg) noexcept {
 		FQuaternion pitch, yaw, roll;
 
-		pitch.w	= cos(arg.pitch);
-		pitch.x	= sin(arg.pitch);
-		yaw.w	= cos(arg.yaw);
-		yaw.y	= sin(arg.yaw);
-		roll.w	= cos(arg.roll);
-		roll.z	= sin(arg.roll);
+		pitch.w	= cos(arg.x);
+		pitch.x	= sin(arg.x);
+		yaw.w	= cos(arg.y);
+		yaw.y	= sin(arg.y);
+		roll.w	= cos(arg.z);
+		roll.z	= sin(arg.z);
 
 		return pitch * yaw * roll;
 	}

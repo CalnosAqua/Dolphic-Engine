@@ -3,27 +3,15 @@
  */
 #pragma once
 #pragma warning(disable : 4201)
+#include "structs/t3.hpp"
 #include "frot.hpp"
 
 namespace dlph {
 	/**	@class	FEulerRotation
 	 *	@brief	単精度浮動小数点数型のオイラー角
 	 */
-	class FEulerRotation final {
+	class FEulerRotation final : public Element3<FRotation> {
 	public:
-		union {
-			//! @brief 全成分
-			FRotation p[3U];
-			struct {
-				//! @brief ピッチ角成分
-				FRotation pitch;
-				//! @brief ヨー角成分
-				FRotation yaw;
-				//! @brief ロール角成分
-				FRotation roll;
-			};
-		};
-
 		//! @brief ムーブコンストラクタ
 		FEulerRotation(FEulerRotation&&) noexcept = default;
 		//! @brief コピーコンストラクタ

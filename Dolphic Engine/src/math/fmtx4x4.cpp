@@ -2,7 +2,7 @@
  *	@brief	単精度浮動小数点数用の四次正方行列クラス
  */
 #include "structs/flt3x3.hpp"
-#include "structs/flt4.hpp"
+#include "structs/t4.hpp"
 #include "math/fmtx4x4.hpp"
 #include "math/fmtx3x3.hpp"
 #include "math/fvec4.hpp"

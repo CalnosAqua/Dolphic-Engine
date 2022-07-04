@@ -111,15 +111,6 @@
     <ClInclude Include="include\math\mathutil.hpp">
       <Filter>Project\Mathematic</Filter>
     </ClInclude>
-    <ClInclude Include="include\structs\flt2.hpp">
-      <Filter>Project\Structure</Filter>
-    </ClInclude>
-    <ClInclude Include="include\structs\flt3.hpp">
-      <Filter>Project\Structure</Filter>
-    </ClInclude>
-    <ClInclude Include="include\structs\flt4.hpp">
-      <Filter>Project\Structure</Filter>
-    </ClInclude>
     <ClInclude Include="include\times\clock.hpp">
       <Filter>Project\Time Manager</Filter>
     </ClInclude>
@@ -152,15 +143,6 @@
     </ClInclude>
     <ClInclude Include="include\gmtry\fray.hpp">
       <Filter>Project\Geometry</Filter>
-    </ClInclude>
-    <ClInclude Include="include\structs\uint2.hpp">
-      <Filter>Project\Structure</Filter>
-    </ClInclude>
-    <ClInclude Include="include\structs\uint3.hpp">
-      <Filter>Project\Structure</Filter>
-    </ClInclude>
-    <ClInclude Include="include\structs\uint4.hpp">
-      <Filter>Project\Structure</Filter>
     </ClInclude>
     <ClInclude Include="include\math\feqpln3.hpp">
       <Filter>Project\Mathematic</Filter>
@@ -215,6 +197,21 @@
     </ClInclude>
     <ClInclude Include="include\dlph\dlph_tfile.hpp">
       <Filter>Project\DolphicRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cont\array.hpp">
+      <Filter>Project\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="include\structs\const.hpp">
+      <Filter>Project\Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include\structs\t2.hpp">
+      <Filter>Project\Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include\structs\t3.hpp">
+      <Filter>Project\Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include\structs\t4.hpp">
+      <Filter>Project\Structure</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

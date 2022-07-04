@@ -3,7 +3,7 @@
  */
 #pragma once
 #include "ifs/noncopyable.hpp"
-#include "structs/flt4.hpp"
+#include "structs/t4.hpp"
 #include "d3d12_rsrc_barrier.hpp"
 #include "d3d12_buffer.hpp"
 #include "d3d12_cmd_queue.hpp"

@@ -2,7 +2,7 @@
  *	@brief	Dolphic Engine 用のテクスチャサイズ列挙体
  */
 #pragma once
-#include "structs/uint2.hpp"
+#include "structs/t2.hpp"
 
 namespace dlph {
 	enum class TextureSizeType : unsigned char {

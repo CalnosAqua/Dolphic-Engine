@@ -5,7 +5,7 @@
 
 namespace dlph {
 	FEulerRotation::FEulerRotation() noexcept :
-		pitch(), yaw(), roll()
+		Element3()
 	{}
 
 	FEulerRotation& FEulerRotation::operator+=(FEulerRotation const& rhs) noexcept {

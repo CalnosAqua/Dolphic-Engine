@@ -3,12 +3,10 @@
  */
 #pragma once
 #pragma warning(disable : 4324)
-#include "structs/flt3.hpp"
+#include "structs/t3.hpp"
 #include <initializer_list>
 
 namespace dlph {
-	struct Float3;
-
 	/**	@class	FVector3
 	 *	@brief	単精度浮動小数点数型の三次元ベクトル
 	 */
@@ -36,7 +34,7 @@ namespace dlph {
 		{}
 		//!	@brief	コンストラクタ
 		constexpr FVector3(float const& x, float const& y, float const& z) noexcept :
-			Float3{ x, y, z }
+			Float3( x, y, z )
 		{}
 
 		//!	@brief	複合加算演算子

@@ -183,7 +183,7 @@ namespace dlph {
 
 		m_list->ClearDepthStencilView(dsv, D3D12_CLEAR_FLAG_DEPTH, 1.0f, 0U, 0U, nullptr);
 
-		m_list->ClearRenderTargetView(rtv, m_color.p, 0, nullptr);
+		m_list->ClearRenderTargetView(rtv, static_cast<float*>(m_color.p), 0, nullptr);
 
 		m_list->RSSetViewports(1, &m_viewport);
 

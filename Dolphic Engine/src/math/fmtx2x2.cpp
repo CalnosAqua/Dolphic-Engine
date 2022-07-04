@@ -1,7 +1,7 @@
 ﻿/**	@file	fmtx2x2.cpp
  *	@brief	単精度浮動小数点数用の二次正方行列クラス
  */
-#include "structs/flt2.hpp"
+#include "structs/t2.hpp"
 #include "math/fmtx2x2.hpp"
 #include "math/fvec2.hpp"
 #include "math/math.hpp"
@@ -94,17 +94,17 @@ namespace dlph {
 
 	FMatrix2x2& FMatrix2x2::column_prosum(unsigned int const& from, unsigned int const& to, float const& rate) noexcept {
 		if (from < 2U && to < 2U) {
-			std::array<float, 2U> tmp;
+			Array<float, 2U> tmp;
 			for (unsigned int i = 0U; i < 2U; ++i) {
 				tmp = { p[i * 2U + to], p[i * 2U + from] * rate };
-				p[i * 2U + to] = Math<float>::sum(tmp.data(), static_cast<unsigned int>(tmp.size()));
+				p[i * 2U + to] = Math<float>::sum(static_cast<float*>(tmp), static_cast<unsigned int>(tmp.size()));
 			}
 		}
 		return *this;
 	}
 
 	FMatrix2x2& FMatrix2x2::operator+=(FMatrix2x2 const& rhs) noexcept {
-		store(p, add(load(p), load(rhs.p)));
+		store(static_cast<float*>(p), add(load(static_cast<float*>(p)), load(const_cast<float*>(rhs.p))));
 		return *this;
 	}
 
@@ -114,7 +114,7 @@ namespace dlph {
 	}
 
 	FMatrix2x2& FMatrix2x2::operator*=(float const& rhs) noexcept {
-		store(p, mul(load(p), set1(rhs)));
+		store(static_cast<float*>(p), mul(load(static_cast<float*>(p)), set1(rhs)));
 		return *this;
 	}
 

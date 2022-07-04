@@ -319,7 +319,12 @@ namespace dlph {
 		return true;
 	}
 
-	bool const createShaderResourceView(D3D12Buffer& buffer, std::wstring const& path, TextureSizeType const& type, RasterPictureFileType rtype) noexcept {
+	/*/
+	bool const createShaderResourceView(
+		D3D12Buffer& buffer, std::wstring const& path,
+		TextureSizeType const& type,
+		RasterPictureFileType rtype
+	) noexcept {
 		HRESULT hResult = S_OK;
 
 		buffer.init(D3D12ViewType::SRV, 1U);
@@ -381,4 +386,5 @@ namespace dlph {
 
 		return true;
 	}
+	/*/
 }

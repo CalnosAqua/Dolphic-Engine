@@ -2,6 +2,7 @@
  *	@brief	組み込み関数ラッパー
  */
 #pragma once
+#include "cont/array.hpp"
 
 #if defined(_M_IX86) || defined(_M_X64)
 #	include <immintrin.h>

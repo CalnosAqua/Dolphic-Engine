@@ -3,20 +3,18 @@
  */
 #pragma once
 #pragma warning(disable : 4201)
+#include "const.hpp"
 
 namespace dlph {
-	//!	@brief	成分数
-	static unsigned int constexpr FLT4x4_CNT = 16U;
-
 	/**	@struct	Float4x4
 	 *	@brief	四次正方行列用構造体
 	 */
 	struct Float4x4 {
 		union {
 			//!	@brief	全成分
-			float p[FLT4x4_CNT];
+			float p[T4x4_CNT];
 			//!	@brief	全成分
-			float m[4U][4U];
+			float m[T4_CNT][T4_CNT];
 			struct {
 				//!	@brief	一行一列目の成分
 				float m00;

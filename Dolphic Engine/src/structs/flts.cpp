@@ -2,26 +2,19 @@
  *	@brief	テンソル便利関数群
  */
 #include "structs/flts.hpp"
-
-#include "structs/flt2.hpp"
-#include "structs/flt3.hpp"
-#include "structs/flt4.hpp"
-
-#include "structs/flt2x2.hpp"
-#include "structs/flt3x3.hpp"
-#include "structs/flt4x4.hpp"
+#include "structs/const.hpp"
 
 namespace dlph {
 	Float2 constexpr set_vt(float const& x, float const& y) noexcept {
-		return Float2{ x, y };
+		return Float2( x, y );
 	}
 
 	Float3 constexpr set_vt(float const& x, float const& y, float const& z) noexcept {
-		return Float3{ x, y, z };
+		return Float3( x, y, z );
 	}
 
 	Float4 constexpr set_vt(float const& x, float const& y, float const& z, float const& w) noexcept {
-		return Float4{ x, y, z, w };
+		return Float4( x, y, z, w );
 	}
 
 	Float2x2 constexpr set_mtx(
@@ -61,49 +54,49 @@ namespace dlph {
 	}
 
 	void set_mtx_column(Float2x2& mtx, Float2 const& vt, unsigned int const& idx) noexcept {
-		if (idx < FLT2_CNT) {
-			for (unsigned int i = 0; i < FLT2_CNT; ++i) {
-				mtx.p[i * FLT2_CNT + idx] = vt.p[i];
+		if (idx < T2_CNT) {
+			for (unsigned int i = 0; i < T2_CNT; ++i) {
+				mtx.p[i * T2_CNT + idx] = vt.p[i];
 			}
 		}
 	}
 
 	void set_mtx_column(Float3x3& mtx, Float3 const& vt, unsigned int const& idx) noexcept {
-		if (idx < FLT3_CNT) {
-			for (unsigned int i = 0; i < FLT3_CNT; ++i) {
-				mtx.p[i * FLT3_CNT + idx] = vt.p[i];
+		if (idx < T3_CNT) {
+			for (unsigned int i = 0; i < T3_CNT; ++i) {
+				mtx.p[i * T3_CNT + idx] = vt.p[i];
 			}
 		}
 	}
 
 	void set_mtx_column(Float4x4& mtx, Float4 const& vt, unsigned int const& idx) noexcept {
-		if (idx < FLT4_CNT) {
-			for (unsigned int i = 0; i < FLT4_CNT; ++i) {
-				mtx.p[i * FLT4_CNT + idx] = vt.p[i];
+		if (idx < T4_CNT) {
+			for (unsigned int i = 0; i < T4_CNT; ++i) {
+				mtx.p[i * T4_CNT + idx] = vt.p[i];
 			}
 		}
 	}
 
 	void set_mtx_row(Float2x2& mtx, Float2 const& vt, unsigned int const& idx) noexcept {
-		if (idx < FLT2_CNT) {
-			for (unsigned int i = 0; i < FLT2_CNT; ++i) {
-				mtx.p[idx * FLT2_CNT + i] = vt.p[i];
+		if (idx < T2_CNT) {
+			for (unsigned int i = 0; i < T2_CNT; ++i) {
+				mtx.p[idx * T2_CNT + i] = vt.p[i];
 			}
 		}
 	}
 
 	void set_mtx_row(Float3x3& mtx, Float3 const& vt, unsigned int const& idx) noexcept {
-		if (idx < FLT3_CNT) {
-			for (unsigned int i = 0; i < FLT3_CNT; ++i) {
-				mtx.p[idx * FLT3_CNT + i] = vt.p[i];
+		if (idx < T3_CNT) {
+			for (unsigned int i = 0; i < T3_CNT; ++i) {
+				mtx.p[idx * T3_CNT + i] = vt.p[i];
 			}
 		}
 	}
 
 	void set_mtx_row(Float4x4& mtx, Float4 const& vt, unsigned int const& idx) noexcept {
-		if (idx < FLT4_CNT) {
-			for (unsigned int i = 0; i < FLT4_CNT; ++i) {
-				mtx.p[idx * FLT4_CNT + i] = vt.p[i];
+		if (idx < T4_CNT) {
+			for (unsigned int i = 0; i < T4_CNT; ++i) {
+				mtx.p[idx * T4_CNT + i] = vt.p[i];
 			}
 		}
 	}
@@ -170,61 +163,61 @@ namespace dlph {
 		mtx.m32 = tmp;
 	}
 
-	Float2 constexpr sep_column(Float2x2 const& mtx, unsigned int const& idx) noexcept {
+	Float2 const sep_column(Float2x2 const& mtx, unsigned int const& idx) noexcept {
 		Float2 result{};
-		if (idx < FLT2_CNT) {
-			for (unsigned int i = 0; i < FLT2_CNT; ++i) {
-				result.p[i] = mtx.p[i * FLT2_CNT + idx];
+		if (idx < T2_CNT) {
+			for (unsigned int i = 0; i < T2_CNT; ++i) {
+				result.p[i] = mtx.p[i * T2_CNT + idx];
 			}
 		}
 		return result;
 	}
 
-	Float3 constexpr sep_column(Float3x3 const& mtx, unsigned int const& idx) noexcept {
+	Float3 const sep_column(Float3x3 const& mtx, unsigned int const& idx) noexcept {
 		Float3 result{};
-		if (idx < FLT3_CNT) {
-			for (unsigned int i = 0; i < FLT3_CNT; ++i) {
-				result.p[i] = mtx.p[i * FLT3_CNT + idx];
+		if (idx < T3_CNT) {
+			for (unsigned int i = 0; i < T3_CNT; ++i) {
+				result.p[i] = mtx.p[i * T3_CNT + idx];
 			}
 		}
 		return result;
 	}
 
-	Float4 constexpr sep_column(Float4x4 const& mtx, unsigned int const& idx) noexcept {
+	Float4 const sep_column(Float4x4 const& mtx, unsigned int const& idx) noexcept {
 		Float4 result{};
-		if (idx < FLT4_CNT) {
-			for (unsigned int i = 0; i < FLT4_CNT; ++i) {
-				result.p[i] = mtx.p[i * FLT4_CNT + idx];
+		if (idx < T4_CNT) {
+			for (unsigned int i = 0; i < T4_CNT; ++i) {
+				result.p[i] = mtx.p[i * T4_CNT + idx];
 			}
 		}
 		return result;
 	}
 
-	Float2 constexpr sep_row(Float2x2 const& mtx, unsigned int const& idx) noexcept {
+	Float2 const sep_row(Float2x2 const& mtx, unsigned int const& idx) noexcept {
 		Float2 result{};
-		if (idx < FLT2_CNT) {
-			for (unsigned int i = 0; i < FLT2_CNT; ++i) {
-				result.p[i] = mtx.p[idx * FLT2_CNT + i];
+		if (idx < T2_CNT) {
+			for (unsigned int i = 0; i < T2_CNT; ++i) {
+				result.p[i] = mtx.p[idx * T2_CNT + i];
 			}
 		}
 		return result;
 	}
 
-	Float3 constexpr sep_row(Float3x3 const& mtx, unsigned int const& idx) noexcept {
+	Float3 const sep_row(Float3x3 const& mtx, unsigned int const& idx) noexcept {
 		Float3 result{};
-		if (idx < FLT3_CNT) {
-			for (unsigned int i = 0; i < FLT3_CNT; ++i) {
-				result.p[i] = mtx.p[idx * FLT3_CNT + i];
+		if (idx < T3_CNT) {
+			for (unsigned int i = 0; i < T3_CNT; ++i) {
+				result.p[i] = mtx.p[idx * T3_CNT + i];
 			}
 		}
 		return result;
 	}
 
-	Float4 constexpr sep_row(Float4x4 const& mtx, unsigned int const& idx) noexcept {
+	Float4 const sep_row(Float4x4 const& mtx, unsigned int const& idx) noexcept {
 		Float4 result{};
-		if (idx < FLT4_CNT) {
-			for (unsigned int i = 0; i < FLT4_CNT; ++i) {
-				result.p[i] = mtx.p[idx * FLT4_CNT + i];
+		if (idx < T4_CNT) {
+			for (unsigned int i = 0; i < T4_CNT; ++i) {
+				result.p[i] = mtx.p[idx * T4_CNT + i];
 			}
 		}
 		return result;

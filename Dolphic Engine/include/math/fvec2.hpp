@@ -3,12 +3,10 @@
  */
 #pragma once
 #pragma warning(disable : 4324)
-#include "structs/flt2.hpp"
+#include "structs/t2.hpp"
 #include <initializer_list>
 
 namespace dlph {
-	struct Float2;
-
 	/**	@class	FVector2
 	 *	@brief	単精度浮動小数点数型の二次元ベクトル
 	 */
@@ -36,7 +34,7 @@ namespace dlph {
 		{}
 		//!	@brief	コンストラクタ
 		constexpr FVector2(float const& x, float const& y) noexcept :
-			Float2{ x, y }
+			Float2( x, y )
 		{}
 
 		//!	@brief	複合加算演算子

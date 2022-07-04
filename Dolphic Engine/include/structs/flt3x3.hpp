@@ -3,20 +3,18 @@
  */
 #pragma once
 #pragma warning(disable : 4201)
+#include "const.hpp"
 
 namespace dlph {
-	//!	@brief	成分数
-	static unsigned int constexpr FLT3x3_CNT = 9U;
-
 	/**	@struct	Float3x3
 	 *	@brief	三次正方行列用構造体
 	 */
 	struct Float3x3 {
 		union {
 			//!	@brief	全成分
-			float p[FLT3x3_CNT];
+			float p[T3x3_CNT];
 			//!	@brief	全成分
-			float m[3U][3U];
+			float m[T3_CNT][T3_CNT];
 			struct {
 				//!	@brief	一行一列目の成分
 				float m00;

@@ -2,11 +2,9 @@
  *	@brief	平面クラス
  */
 #pragma once
-#include "structs/flt2.hpp"
-#include "structs/flt3.hpp"
-#include "structs/flt4.hpp"
-
-#include "structs/uint2.hpp"
+#include "structs/t2.hpp"
+#include "structs/t3.hpp"
+#include "structs/t4.hpp"
 
 #include "math/fvec3.hpp"
 #include "math/fquat.hpp"

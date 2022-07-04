@@ -3,7 +3,7 @@
  */
 #pragma once
 #pragma warning(disable : 4201)
-#include "structs/flt4.hpp"
+#include "structs/t4.hpp"
 #include <initializer_list>
 
 namespace dlph {
@@ -34,7 +34,7 @@ namespace dlph {
 		{}
 		//!	@brief	コンストラクタ
 		constexpr FQuaternion(float const& x, float const& y, float const& z, float const& w) noexcept :
-			Float4{ x, y, z, w }
+			Float4( x, y, z, w )
 		{}
 
 		//!	@brief	複合加算演算子

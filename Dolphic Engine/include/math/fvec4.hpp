@@ -3,12 +3,10 @@
  */
 #pragma once
 #pragma warning(disable : 4324)
-#include "structs/flt4.hpp"
+#include "structs/t4.hpp"
 #include <initializer_list>
 
 namespace dlph {
-	struct Float4;
-
 	/**	@class	FVector4
 	 *	@brief	単精度浮動小数点数型の四次元ベクトル
 	 */
@@ -36,7 +34,7 @@ namespace dlph {
 		{}
 		//!	@brief	コンストラクタ
 		constexpr FVector4(float const& x, float const& y, float const& z, float const& w) noexcept :
-			Float4{ x, y, z, w }
+			Float4( x, y, z, w )
 		{}
 
 		//!	@brief	複合加算演算子

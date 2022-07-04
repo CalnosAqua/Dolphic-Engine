@@ -51,9 +51,9 @@ namespace dlph {
 	FMatrix3x3 const FEqPlane3::matrix(HandSide const& hs) const noexcept {
 		FMatrix3x3 result;
 
-		memcpy(&result.p[0U], m_tangent.p, sizeof(float) * FLT3_CNT);
-		memcpy(&result.p[3U], m_binormal.p, sizeof(float) * FLT3_CNT);
-		memcpy(&result.p[6U], m_normal.p, sizeof(float) * FLT3_CNT);
+		memcpy(&result.p[0U], const_cast<float*>(m_tangent.p), sizeof(float) * T3_CNT);
+		memcpy(&result.p[3U], const_cast<float*>(m_binormal.p), sizeof(float) * T3_CNT);
+		memcpy(&result.p[6U], const_cast<float*>(m_normal.p), sizeof(float) * T3_CNT);
 
 		if (hs == HandSide::RHS) {
 			transpose(result);
