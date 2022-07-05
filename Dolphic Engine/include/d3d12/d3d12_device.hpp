@@ -2,7 +2,7 @@
  *	@brief	Direct3D12 用のデバイスクラス
  */
 #pragma	once
-#include "ifs/singleton.hpp"
+#include "util/singleton.hpp"
 #include <d3d12.h>
 
 namespace dlph {

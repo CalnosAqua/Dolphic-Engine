@@ -1,7 +1,7 @@
 ﻿/**	@file	clock.hpp
  *	@brief	汎用時計クラス
  */
-#include "times/clock.hpp"
+#include "util/clock.hpp"
 
 namespace dlph {
 	Clock::Clock() noexcept :

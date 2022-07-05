@@ -1,7 +1,7 @@
 ﻿/**	@file	timer.cpp
  *	@brief	汎用タイムスイッチクラス
  */
-#include "times/timer.hpp"
+#include "util/timer.hpp"
 #include "math/math.hpp"
 
 namespace dlph {

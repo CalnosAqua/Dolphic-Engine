@@ -2,9 +2,9 @@
  *	@brief	平面クラス
  */
 #pragma once
-#include "structs/t2.hpp"
-#include "structs/t3.hpp"
-#include "structs/t4.hpp"
+#include "math/t2.hpp"
+#include "math/t3.hpp"
+#include "math/t4.hpp"
 
 #include "math/fvec3.hpp"
 #include "math/fquat.hpp"

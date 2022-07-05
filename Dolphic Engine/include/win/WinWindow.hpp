@@ -7,7 +7,7 @@
 #	define NOMINMAX
 #endif
 
-#include "ifs/noncopyable.hpp"
+#include "util/noncopyable.hpp"
 #include <Windows.h>
 
 namespace dlph {

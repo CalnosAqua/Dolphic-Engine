@@ -3,6 +3,7 @@
  */
 #include "math/math.hpp"
 #include "math/intrin.hpp"
+#include <vector>
 #include <numeric>
 #include <cfloat>
 
@@ -77,6 +78,25 @@ namespace dlph {
 	template<>
 	float const Math<float>::average(float const* const& ptr, size_t const& cnt, bool const& is_speedy) noexcept {
 		return sum(ptr, cnt, is_speedy) / static_cast<float>(cnt);
+	}
+
+	template<>
+	float const Math<float>::variance(float const* const& ptr, size_t const& cnt, bool const& is_speedy) noexcept {
+		if (ptr == nullptr || cnt <= 0U) {
+			return 0.0f;
+		}
+
+		std::vector<float> values;
+		float result, average;
+		average = Math::average(ptr, cnt, is_speedy);
+		for (size_t idx = 0U; idx < cnt; ++idx) {
+			result = sum({ *(ptr + idx), -average });
+			values.emplace_back(result * result);
+		}
+		result = sum(values.data(), values.size(), is_speedy);
+		result /= static_cast<float>(cnt);
+
+		return result;
 	}
 
 	template <>
@@ -213,6 +233,25 @@ namespace dlph {
 	template<>
 	double const Math<double>::average(double const* const& ptr, size_t const& cnt, bool const& is_speedy) noexcept {
 		return sum(ptr, cnt, is_speedy) / static_cast<double>(cnt);
+	}
+
+	template<>
+	double const Math<double>::variance(double const* const& ptr, size_t const& cnt, bool const& is_speedy) noexcept {
+		if (ptr == nullptr || cnt <= 0U) {
+			return 0.0;
+		}
+
+		std::vector<double> values;
+		double result, average;
+		average = Math::average(ptr, cnt, is_speedy);
+		for (size_t idx = 0U; idx < cnt; ++idx) {
+			result = sum({ *(ptr + idx), -average });
+			values.emplace_back(result * result);
+		}
+		result = sum(values.data(), values.size(), is_speedy);
+		result /= static_cast<double>(cnt);
+
+		return result;
 	}
 
 	template <>

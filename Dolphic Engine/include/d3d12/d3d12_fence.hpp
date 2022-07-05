@@ -2,7 +2,7 @@
  *	@brief	フェンス
  */
 #pragma once
-#include "ifs/noncopyable.hpp"
+#include "util/noncopyable.hpp"
 #include "d3d12_cmd_queue.hpp"
 #include <d3d12.h>
 

@@ -59,6 +59,32 @@ namespace dlph {
 		 *	@return 計算結果
 		 */
 		static T const average(T const* const& ptr, size_t const& cnt, bool const& is_speedy = false) noexcept;
+		/**	@brief 標準偏差関数
+		 *	@param[in] args 対象データ
+		 *	@param[in] is_speedy 高速計算モード
+		 *	@return 計算結果
+		 */
+		static T const deviate(std::initializer_list<T> const& args, bool const& is_speedy = false) noexcept;
+		/**	@brief 標準偏差関数
+		 *	@param[in] ptr 配列の先頭へのポインタ
+		 *	@param[in] cnt 配列長
+		 *	@param[in] is_speedy 高速計算モード
+		 *	@return 計算結果
+		 */
+		static T const deviate(T const* const& ptr, size_t const& cnt, bool const& is_speedy = false) noexcept;
+		/**	@brief 分散関数
+		 *	@param[in] args 対象データ
+		 *	@param[in] is_speedy 高速計算モード
+		 *	@return 計算結果
+		 */
+		static T const variance(std::initializer_list<T> const& args, bool const& is_speedy = false) noexcept;
+		/**	@brief 分散関数
+		 *	@param[in] ptr 配列の先頭へのポインタ
+		 *	@param[in] cnt 配列長
+		 *	@param[in] is_speedy 高速計算モード
+		 *	@return 計算結果
+		 */
+		static T const variance(T const* const& ptr, size_t const& cnt, bool const& is_speedy = false) noexcept;
 		/**	@brief	クランプ関数
 		 *	@param[in] value 左辺の値
 		 *	@param[in] min 右辺の値
@@ -73,7 +99,6 @@ namespace dlph {
 		 *	@return 計算結果
 		 */
 		static T const loop(T const& value, T const& min, T const& max) noexcept;
-
 		/** @brief バーンシュタイン関数
 		 *	@param[in] n	基準の値
 		 *	@param[in] k	対象の値
@@ -90,5 +115,20 @@ namespace dlph {
 	template<typename T>
 	inline T const Math<T>::average(std::initializer_list<T> const& args, bool const& is_speedy) noexcept {
 		return average(args.begin(), args.size(), is_speedy);
+	}
+
+	template<typename T>
+	inline T const Math<T>::deviate(std::initializer_list<T> const& args, bool const& is_speedy) noexcept {
+		return deviate(args.begin(), args.size(), is_speedy);
+	}
+
+	template<typename T>
+	inline T const Math<T>::deviate(T const* const& ptr, size_t const& cnt, bool const& is_speedy) noexcept {
+		return Math::sqrt(Math::variance(ptr, cnt, is_speedy));
+	}
+
+	template<typename T>
+	inline T const Math<T>::variance(std::initializer_list<T> const& args, bool const& is_speedy) noexcept {
+		return variance(args.begin(), args.size(), is_speedy);
 	}
 }

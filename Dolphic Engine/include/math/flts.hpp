@@ -3,13 +3,13 @@
  */
 #pragma once
 
-#include "structs/t2.hpp"
-#include "structs/t3.hpp"
-#include "structs/t4.hpp"
+#include "math/t2.hpp"
+#include "math/t3.hpp"
+#include "math/t4.hpp"
 
-#include "structs/flt2x2.hpp"
-#include "structs/flt3x3.hpp"
-#include "structs/flt4x4.hpp"
+#include "math/flt2x2.hpp"
+#include "math/flt3x3.hpp"
+#include "math/flt4x4.hpp"
 
 namespace dlph {
 	/**	@brief	設定関数

@@ -2,7 +2,7 @@
  *	@brief	Direct3D12 用のリソースバリアクラス宣言ファイル
  */
 #pragma once
-#include "ifs/noncopyable.hpp"
+#include "util/noncopyable.hpp"
 #include "d3d12_cmd_list.hpp"
 #include <d3d12.h>
 

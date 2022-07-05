@@ -3,7 +3,7 @@
  */
 #pragma once
 #pragma warning(disable : 4324)
-#include "structs/flt4x4.hpp"
+#include "math/flt4x4.hpp"
 #include <initializer_list>
 
 namespace dlph {

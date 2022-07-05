@@ -1,8 +1,8 @@
 ﻿/**	@file	fmtx3x3.cpp
  *	@brief	単精度浮動小数点数用の三次正方行列クラス
  */
-#include "structs/flt2x2.hpp"
-#include "structs/t3.hpp"
+#include "math/flt2x2.hpp"
+#include "math/t3.hpp"
 #include "math/fmtx3x3.hpp"
 #include "math/fmtx2x2.hpp"
 #include "math/fvec3.hpp"

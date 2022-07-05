@@ -1,8 +1,8 @@
 ﻿/**	@file	flts.cpp
  *	@brief	テンソル便利関数群
  */
-#include "structs/flts.hpp"
-#include "structs/const.hpp"
+#include "math/flts.hpp"
+#include "math/const.hpp"
 
 namespace dlph {
 	Float2 constexpr set_vt(float const& x, float const& y) noexcept {

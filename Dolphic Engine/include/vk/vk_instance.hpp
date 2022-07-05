@@ -2,7 +2,7 @@
  *	@brief	Vulkan のインスタンスクラス
  */
 #pragma once
-#include "ifs/singleton.hpp"
+#include "util/singleton.hpp"
 #include <string>
 #include <vulkan/vulkan.h>
 

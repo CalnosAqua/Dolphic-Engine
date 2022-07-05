@@ -35,6 +35,12 @@ namespace dlph {
 	__m128 const mul(__m128 const& lhs, __m128 const& rhs) noexcept {
 		return _mm_mul_ps(lhs, rhs);
 	}
+
+	__m128 const& zero() noexcept {
+		static __m128 const result = _mm_set1_ps(0.0f);
+		return result;
+	}
+
 #	elif defined(_M_ARM) || defined(_M_ARM64)
 	//	ARM CPU 用の SIMD 関数ラッパ
 
@@ -65,6 +71,11 @@ namespace dlph {
 
 	float32x4_t const mul(float32x4_t const& lhs, float32x4_t const& rhs) noexcept {
 		return vmulq_f32(lhs, rhs);
+	}
+
+	float32x4_t const& zero() noexcept {
+		static float32x4_t const result = vdupq_n_f32(0.0f);
+		return result;
 	}
 #	endif
 }

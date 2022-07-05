@@ -3,7 +3,7 @@
  */
 #pragma once
 #pragma warning(disable : 4324)
-#include "structs/t3.hpp"
+#include "math/t3.hpp"
 #include <initializer_list>
 
 namespace dlph {

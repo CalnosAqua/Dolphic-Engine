@@ -2,8 +2,6 @@
  *	@brief	組み込み関数ラッパー
  */
 #pragma once
-#include "cont/array.hpp"
-
 #if defined(_M_IX86) || defined(_M_X64)
 #	include <immintrin.h>
 #elif defined(_M_ARM)
@@ -33,4 +31,7 @@ namespace dlph {
 	vctr const sub(vctr const& lhs, vctr const& rhs) noexcept;
 	//!	@brief	乗算関数
 	vctr const mul(vctr const& lhs, vctr const& rhs) noexcept;
+
+	//!	@brief	ゼロ値取得関数
+	vctr const& zero() noexcept;
 }

@@ -3,7 +3,7 @@
  */
 #pragma once
 #pragma warning(disable : 4251)
-#include "ifs/noncopyable.hpp"
+#include "util/noncopyable.hpp"
 #include "dlph/dlph_ttexsize.hpp"
 #include "dlph/dlph_tfile.hpp"
 #include "d3d12_tview.hpp"
